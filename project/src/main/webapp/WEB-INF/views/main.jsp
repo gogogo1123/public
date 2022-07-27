@@ -6,8 +6,10 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 
-<style>
 
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@700&family=Noto+Sans+KR:wght@300&family=Open+Sans:ital@1&display=swap');
 #brand-logo {
   font-size: 34px;
 }
@@ -138,6 +140,19 @@ body {
     border: 1px solid #ddd;
 }
 
+
+
+
+.profile img {
+    width: 250px;
+    height: 250px;
+    box-shadow: 0 5px 15px rgba(26, 25, 25, 0.329);
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+
+
 </style>
 
 
@@ -196,6 +211,8 @@ body {
 </div>
 
 
+
+<br>
 
 <div style="width: 1600px;height: 400px;display: flex;margin-left: 400px;">
 
@@ -329,28 +346,44 @@ body {
 
 
 
+<br><br><br>
 
 
 
 
 
 
-<br>
 <hr style="margin-left: 100px;background-color: black;height: 1px;margin-top: 100px;">
  <Br>
  
 <div style="width: 1900px;height: 300px;align-items: center;display: flex;" >
 
 <div style="width: 300px;text-align: center;align-items: center;">
-<p style="margin: auto;margin-left: 200px;font-size: 18px;">신상품</p>
+<p style="margin: auto;margin-left: 200px;font-size: 18px;font-family: 'Nanum Gothic', sans-serif;">신상품</p>
 </div>
 <div class="row" style="width: 1600px;margin-left: 140px;margin-right: 10px;">
 
             <div class="col-lg-3 col-sm-6 d-flex flex-column align-items-center justify-content-center product-item my-3">
                 <div class="product">
-                    <img src="https://content.rolex.com/dam/watches/family-pages/gmt-master-ii/roller-history/professional-watches-gmt-master-ii-history-2014-red-blue_portrait.jpg?imwidth=420"
+                    <img src="resources/image1/1.webp"
                         alt="" style="width: 250px;height: 250px;">
-                           <div class="price" style="text-align: center;">$ 60.0</div>
+                           <div style="text-align:center; margin-top: 8px;"><span class="text-grey fs-12" style="color: black;margin-top:18px; font-size: 16px;text-align: right;margin-top: 6px;">BREITLING</span></div>
+  </div>
+</div>
+
+<div class="col-lg-3 col-sm-6 d-flex flex-column align-items-center justify-content-center product-item my-3">
+                <div class="product">
+                    <img src="resources/image1/2.jpg"
+                        alt="" style="width: 250px;height: 250px;">
+                         <div style="text-align:center; margin-top: 8px;"><span class="text-grey fs-12" style="color: black;margin-top:18px; font-size: 16px;text-align: right;margin-top: 6px;">BREITLING</span></div>
+  </div>
+</div>
+
+<div class="col-lg-3 col-sm-6 d-flex flex-column align-items-center justify-content-center product-item my-3">
+                <div class="product">
+                    <img src="resources/image1/3.webp"
+                        alt="" style="width: 250px;height: 250px;">
+                         <div style="text-align:center; margin-top: 8px;"><span class="text-grey fs-12" style="color: black;margin-top:18px; font-size: 16px;text-align: right;margin-top: 6px;">BREITLING</span></div>
   </div>
 </div>
 
@@ -358,23 +391,7 @@ body {
                 <div class="product">
                     <img src="https://content.rolex.com/dam/watches/family-pages/gmt-master-ii/roller-history/professional-watches-gmt-master-ii-history-2014-red-blue_portrait.jpg?imwidth=420"
                         alt="" style="width: 250px;height: 250px;">
-                           <div class="price">$ 60.0</div>
-  </div>
-</div>
-
-<div class="col-lg-3 col-sm-6 d-flex flex-column align-items-center justify-content-center product-item my-3">
-                <div class="product">
-                    <img src="https://content.rolex.com/dam/watches/family-pages/gmt-master-ii/roller-history/professional-watches-gmt-master-ii-history-2014-red-blue_portrait.jpg?imwidth=420"
-                        alt="" style="width: 250px;height: 250px;">
-                           <div class="price">$ 60.0</div>
-  </div>
-</div>
-
-<div class="col-lg-3 col-sm-6 d-flex flex-column align-items-center justify-content-center product-item my-3">
-                <div class="product">
-                    <img src="https://content.rolex.com/dam/watches/family-pages/gmt-master-ii/roller-history/professional-watches-gmt-master-ii-history-2014-red-blue_portrait.jpg?imwidth=420"
-                        alt="" style="width: 250px;height: 250px;">
-                           <div class="price">$ 60.0</div>
+                          <div style="text-align:center; margin-top: 8px;"><span class="text-grey fs-12" style="color: black;margin-top:18px; font-size: 16px;text-align: right;margin-top: 6px;">BREITLING</span></div>
   </div>
 </div>
 
@@ -384,9 +401,16 @@ body {
 </div>
 </div>
 
-  <Br>
+
+
+
+
+  <br><br><br>
+  
+  
+  
   <hr style="background-color:black;height: 1px;	margin-left: 100px;">
-  <Br>
+
   
   <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" style="width: 1200px;height:600px;margin: auto;">
   <div class="carousel-indicators">
@@ -396,10 +420,10 @@ body {
   </div>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img style="width: 350px;height: 350px;margin-left: 440px;margin-top: 90px;"  src="https://www.autodaily.co.kr/news/photo/202010/422646_60139_56.png">
+      <img style="width: 300px;height: 250px;margin-left: 440px;margin-top: 90px;"  src="https://www.autodaily.co.kr/news/photo/202010/422646_60139_56.png">
     </div>
     <div class="carousel-item">
-      <img src="https://www.autodaily.co.kr/news/photo/202010/422646_60139_56.png"  alt="..." style="width: 350px;height: 350px;margin-left: 440px;margin-top: 90px;">
+      <img src="https://www.autodaily.co.kr/news/photo/202010/422646_60139_56.png"  alt="..." style="width: 50px;height: 350px;margin-left: 440px;margin-top: 90px;">
     </div>
     <div class="carousel-item">
       <img src="https://www.autodaily.co.kr/news/photo/202010/422646_60139_56.png"  alt="" style="width: 350px;height: 350px;margin-left: 440px;margin-top: 90px;">
@@ -416,19 +440,85 @@ body {
 </div>
   
   
-   <Br>
-    <hr style="background-color:black;height: 1px;	margin-left: 100px;">
-     <Br><br><Br>
+
      
-  <div style="width: 1700px;height: 1600px;background: black;margin: auto;"> 
+     
+     
+     
+      <br><br><br>
+    <hr style="background-color:black;height: 1px;	margin-left: 100px;">
+        <br><br><br>
+     
+  <div style="width: 1700px;height: 1600px;margin: auto;"> 
   
   
   
-  
-  
+<div style="height: 400px;">
+   <div class="profile" style="margin-left: 6px;margin: auto;display: flex;margin-left: 200px;">
+                        <img src="resources/image1/1.webp"
+                            alt="">
+                        <div style="font-family: 'Nanum Gothic', sans-serif;font-size: 18px;margin-left: 100px;margin-top: 150px;">롤렉스 데이토나 (116523)<Br>
+                          <span class="text-grey fs-12" style="color: black;margin-left: 70px;font-size: 14px;">ROLEX </span>
+                        
+                         </div>
+                       
+                    </div>
+    <div style="width: 260px;height: 150px;background-color: #f9f9f9;margin-bottom: 50px;margin-left: 200px;"></div>
+     </div> 
+     
+     
+     <div style="height: 400px;">
+   <div class="profile" style="margin-left: 6px;margin: auto;display: flex;margin-left: 800px;">
+   
+    
+   
+   <div style="font-family: 'Nanum Gothic', sans-serif;font-size: 18px;margin-right: 100px;margin-top: 150px;">파텍필립 그랜드 마스터 차임(Ref.6300A)<Br>
+                          <span class="text-grey fs-12" style="color: black;margin-left: 110px;font-size: 14px;">Patek Philippe </span>
+                        
+                         </div>
+                        <img src="resources/image1/2.jpg"
+                            alt="">
+                       
+                       
+                    </div>
+    <div style="width: 280px;height: 150px;background-color: #f9f9f9;margin-bottom: 50px;margin-left: 1200px;"></div>
+     </div> 
+     
+     
+     <div style="height: 400px;">
+   <div class="profile" style="margin-left: 6px;margin: auto;display: flex;margin-left: 200px;">
+                        <img src="resources/image1/3.webp"
+                            alt="">
+                        <div style="font-family: 'Nanum Gothic', sans-serif;font-size: 18px;margin-left: 100px;margin-top: 150px;">태그호이어 아쿠아레이서 (BAO0928)<Br>
+                          <span class="text-grey fs-12" style="color: black;margin-left: 100px;font-size: 14px;">TAGHeuer </span>
+                        
+                         </div>
+                       
+                    </div>
+    <div style="width: 260px;height: 150px;background-color: #f9f9f9;margin-bottom: 50px;margin-left: 200px;"></div>
+     </div> 
+     
+     
+      <div style="height: 400px;">
+   <div class="profile" style="margin-left: 6px;margin: auto;display: flex;margin-left: 700px;">
+                        <img src="http://botticino.cafe24.com/web/product/medium/FIORITTO/NEW%20ITEM/AB0121211B1A1.jpg"
+                            alt="">
+                        <div style="font-family: 'Nanum Gothic', sans-serif;font-size: 18px;margin-left: 100px;margin-top: 150px;">브라이틀링 네비타이머(B01)<Br>
+                          <span class="text-grey fs-12" style="color: black;margin-left: 80px;font-size: 14px;">BREITLING </span>
+                        
+                         </div>
+                       
+                    </div>
+    <div style="width: 260px;height: 150px;background-color: #f9f9f9;margin-bottom: 50px;margin-left: 700px;"></div>
+     </div> 
+     
+     
+     
+     
   </div>
   
-  
+   <br><br><br>
+    <hr style="background-color:black;height: 1px;	margin-left: 100px;">
 
 </body>
 </html>
