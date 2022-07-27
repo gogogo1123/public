@@ -165,7 +165,7 @@ body {
 
 
     <hr style="background-color:black;height: 1px;	margin-left: 100px;">
-<div class="peo" style="background: url('resources/image/bbb.png');width: 1900px;height: 500px;margin: auto;">
+<div class="peo" style="background: url('resources/image/cc.jpg');width: 1900px;height: 500px;margin: auto;animation-play-state:running;">
 
 </div>
 
@@ -399,6 +399,9 @@ body {
      <Br><br><Br>
      
   <div style="width: 1700px;height: 1600px;background: black;margin: auto;"> 
+  
+  
+  
   
   
   </div>
