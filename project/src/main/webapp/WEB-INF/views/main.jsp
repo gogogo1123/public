@@ -55,12 +55,22 @@ background-image: url("/resources/image/abc.png");
             	
         </div>
     </nav>
+<<<<<<< HEAD
     <hr style="margin-left: 100px;background: black;height: 1px;border: 0;">
 <div class="peo" style="background: url('resources/image/bbb.png');width: 1850px;height: 500px;margin: auto;">
+=======
+    <hr style="background-color:black;height: 1px;	margin-left: 100px;">
+<div class="peo" style="background: url('resources/image/bbb.png');width: 1900px;height: 500px;margin: auto;">
+>>>>>>> branch 'master' of https://github.com/gogogo1123/public.git
 안녕하세요
 </div>
+<<<<<<< HEAD
 <hr style="margin-left: 100px;background-color: black;height: 1px;border: 0;color: black;margin-top: 100px;">
 <div style="width: 1800px;height: 600px;align-items: center;display: flex;" >
+=======
+<hr style="margin-left: 100px;background-color: black;height: 1px;margin-top: 100px;">
+<div style="width: 1900px;height: 300px;align-items: center;display: flex;" >
+>>>>>>> branch 'master' of https://github.com/gogogo1123/public.git
 <div style="width: 300px;text-align: center;align-items: center;">
 <p style="margin: auto;margin-left: 200px;font-size: 18px;">신상품</p>
 </div>
@@ -102,7 +112,7 @@ background-image: url("/resources/image/abc.png");
                 <div class="product">
                     <img src="https://content.rolex.com/dam/watches/family-pages/gmt-master-ii/roller-history/professional-watches-gmt-master-ii-history-2014-red-blue_portrait.jpg?imwidth=420"
                         alt="" style="width: 250px;height: 250px;">
-                           <div class="price">$ 60.0</div>
+                           <div class="price">$ 601.0</div>
   </div>
 </div>
 
@@ -117,6 +127,46 @@ background-image: url("/resources/image/abc.png");
 
 </div>
 </div>
+<<<<<<< HEAD
  <hr style="margin-left: 100px;background: black;height: 1px;border: 0;">
+=======
+  <hr style="background-color:black;height: 1px;	margin-left: 100px;">
+  
+  
+  <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" style="width: 1200px;height:600px;margin: auto;">
+  <div class="carousel-indicators">
+    <button type="button" style="background-color: black;border-radius: 50%;height: 10px;width: 10px;" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" style="background-color: black;border-radius: 50%;height: 5px;width: 5px;" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" style="background-color: black;border-radius: 50%;height: 5px;width: 5px;" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img style="width: 350px;height: 350px;margin-left: 440px;margin-top: 90px;"  src="https://www.autodaily.co.kr/news/photo/202010/422646_60139_56.png">
+    </div>
+    <div class="carousel-item">
+      <img src="https://www.autodaily.co.kr/news/photo/202010/422646_60139_56.png"  alt="..." style="width: 350px;height: 350px;margin-left: 440px;margin-top: 90px;">
+    </div>
+    <div class="carousel-item">
+      <img src="https://www.autodaily.co.kr/news/photo/202010/422646_60139_56.png"  alt="" style="width: 350px;height: 350px;margin-left: 440px;margin-top: 90px;">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev" style="border-color: black;color: black;">
+    <span class="carousel-control-prev-icon-dark" aria-hidden="true" style="color: black;background-color: gray;background: gray;"></span>
+    <span class="visually-hidden" style="color: black;background: black;">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+  
+    <hr style="background-color:black;height: 1px;	margin-left: 100px;">
+  <div style="width: 1700px;height: 1600px;background: black;margin: auto;"> 
+  
+  
+  </div>
+  
+  
+>>>>>>> branch 'master' of https://github.com/gogogo1123/public.git
 </body>
 </html>
