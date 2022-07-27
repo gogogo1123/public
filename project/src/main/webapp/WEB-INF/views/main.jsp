@@ -48,29 +48,29 @@ background-image: url("/resources/image/abc.png");
 <body>
 
 
-<nav style="background-image: url('resources/image/a.png');width: 1900px;height: 60px;margin: auto;">
+<nav style="background-image: url('resources/image/a.png');width: 1850px;height: 60px;margin: auto;">
 
-      <div style="background-image: url('resources/image/a.png');width: 1900px;height: 60px;">
+      <div style="background-image: url('resources/image/a.png');width: 1850px;height: 60px;">
        
             	
         </div>
     </nav>
     <hr style="margin-left: 100px;background: black;height: 1px;border: 0;">
-<div class="peo" style="background: url('resources/image/bbb.png');width: 1900px;height: 500px;margin: auto;">
+<div class="peo" style="background: url('resources/image/bbb.png');width: 1850px;height: 500px;margin: auto;">
 안녕하세요
 </div>
 <hr style="margin-left: 100px;background-color: black;height: 1px;border: 0;color: black;margin-top: 100px;">
-<div style="width: 1900px;height: 300px;align-items: center;display: flex;" >
+<div style="width: 1800px;height: 600px;align-items: center;display: flex;" >
 <div style="width: 300px;text-align: center;align-items: center;">
-<p>신상품</p>
+<p style="margin: auto;margin-left: 200px;font-size: 18px;">신상품</p>
 </div>
-<div class="row" style="width: 1600px;margin-left: 100px;margin-right: 70px;">
+<div class="row" style="width: 1600px;margin-left: 140px;margin-right: 10px;">
 
             <div class="col-lg-3 col-sm-6 d-flex flex-column align-items-center justify-content-center product-item my-3">
                 <div class="product">
                     <img src="https://content.rolex.com/dam/watches/family-pages/gmt-master-ii/roller-history/professional-watches-gmt-master-ii-history-2014-red-blue_portrait.jpg?imwidth=420"
                         alt="" style="width: 250px;height: 250px;">
-                           <div class="price">$ 60.0</div>
+                           <div class="price" style="text-align: center;">$ 60.0</div>
   </div>
 </div>
 
@@ -98,8 +98,25 @@ background-image: url("/resources/image/abc.png");
   </div>
 </div>
 
+<div class="col-lg-3 col-sm-6 d-flex flex-column align-items-center justify-content-center product-item my-3">
+                <div class="product">
+                    <img src="https://content.rolex.com/dam/watches/family-pages/gmt-master-ii/roller-history/professional-watches-gmt-master-ii-history-2014-red-blue_portrait.jpg?imwidth=420"
+                        alt="" style="width: 250px;height: 250px;">
+                           <div class="price">$ 60.0</div>
+  </div>
+</div>
+
+<div class="col-lg-3 col-sm-6 d-flex flex-column align-items-center justify-content-center product-item my-3">
+                <div class="product">
+                    <img src="https://content.rolex.com/dam/watches/family-pages/gmt-master-ii/roller-history/professional-watches-gmt-master-ii-history-2014-red-blue_portrait.jpg?imwidth=420"
+                        alt="" style="width: 250px;height: 250px;">
+                           <div class="price">$ 60.0</div>
+  </div>
+</div>
+
+
 </div>
 </div>
-<hr>
+ <hr style="margin-left: 100px;background: black;height: 1px;border: 0;">
 </body>
 </html>
