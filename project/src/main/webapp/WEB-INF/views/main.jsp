@@ -62,10 +62,10 @@ body {
 }
 
 .card {
-    background: gray;
-    background: gray;
-    min-width: 300px;
-    height: 380px;
+    background: white;
+    background: white;
+    min-width: 150px;
+    height: 200px;
     border-radius: 10px;
     box-shadow: -1px 1px 5px #0000009d;
     padding: 0px;
@@ -162,127 +162,149 @@ body {
     </nav>
 
  
-
-
-    <hr style="background-color:black;height: 1px;	margin-left: 100px;">
-<div class="peo" style="background: url('resources/image/cc.jpg');width: 1900px;height: 500px;margin: auto;animation-play-state:running;">
+<!-- <div class="peo" style="background: url('resources/image/cc.jpg') no-repeat ;width: 1800px;height: 500px;margin: auto;margin-top: 30px;">
 
 </div>
 
-<hr style="margin-left: 100px;background-color: black;height: 1px;border: 0;color: black;margin-top: 100px;">
+<hr style="margin-left: 100px;background-color: black;height: 1px;border: 0;color: black;margin-top: 100px;"> -->
+
+<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="resources/image/dd.png" class="d-block w-100">
+    </div>
+    <div class="carousel-item">
+      <img src="resources/image/gg.png" class="d-block w-100" >
+    </div>
+    <div class="carousel-item">
+      <img src="resources/image/cc.jpg" class="d-block w-100" >
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
 
 
 
+<div style="width: 1600px;height: 400px;display: flex;margin-left: 400px;">
 
-
-<div style="width: 1600px;height: 800px;display: flex;margin-left: 280px;">
-
-    
+    <SPAN style="margin-top: 50px;text-align: center;font-size: 24px;">브랜드별</SPAN>
    
-    <div class="card" style="width: 400px;height:600px;margin-top: 150px;background-color: #f9f9f9;">
+    <div class="card" style="width: 300px;height:300px;margin-top: 150px;background-color:white;">
             <div class="mb-3">
                 <span class="text-grey fs-12" style="color: black;margin-left: 40px;font-size: 16px;">ROLEX</span>
              
             </div>
-          <div class="profile" style="margin-left: 6px;">
+          <div class="profile" style="margin-left: 6px;margin: auto;">
                         <img src="https://newsimg.sedaily.com/2022/01/01/260P4GNZZK_2.jpg"
                             alt="">
                     </div>
             <div class="mt-auto">
                 <div class="">
                      <img src="https://www.pngmart.com/files/4/Rolex-Logo-PNG-Photos.png"
-                        alt="" style="width: 100%;height: 400px;">
+                        alt="" style="width: 100px;height: 50px;">
                  
                 </div>
             </div>
              </div>
              
              
-               <div class="card" style="width: 400px;height:600px;margin-top: 150px;background-color: #f9f9f9;">
+               <div class="card" style="width: 300px;height:300px;margin-top: 150px;background-color: white;">
             <div class="mb-3">
                 <span class="text-grey fs-12" style="color: black;margin-left: 40px;font-size: 16px;">Patek Philippe </span>
              
             </div>
-          <div class="profile" style="margin-left: 6px;">
+          <div class="profile" style="margin-left: 6px;margin: auto;">
                         <img src="https://cdn-images.farfetch-contents.com/14/68/12/42/14681242_32675013_480.jpg"
                             alt="" style="background-color: #f9f9f9;">
                     </div>
             <div class="mt-auto">
                 <div class="">
                      <img src="https://img.danawa.com/images/news/images/000356/20190820085348646_Z4UGNWFL.png"
-                        alt="" style="width: 100%;height: 350px;">
+                        alt="" style="width: 100px;height: 50px;">
                  
                 </div>
             </div>
              </div>
              
-               <div class="card" style="width: 400px;height:600px;margin-top: 150px;background-color: #f9f9f9;">
+               <div class="card" style="width: 300px;height:300px;margin-top: 150px;background-color: white;">
             <div class="mb-3">
                 <span class="text-grey fs-12" style="color: black;margin-left: 40px;font-size: 16px;">TAGHeuer</span>
              
             </div>
-          <div class="profile" style="margin-left: 6px;">
+          <div class="profile" style="margin-left: 6px;margin: auto;">
                         <img src="http://image.auction.co.kr/itemimage/10/b5/1f/10b51f5e26.jpg"
                             alt="">
                     </div>
             <div class="mt-auto">
                 <div class="">
                      <img src="https://mblogthumb-phinf.pstatic.net/20160817_193/ppanppane_1471402360269K04Lz_PNG/%C5%C2%B1%D7%C8%A3%C0%CC%BE%EE_%B7%CE%B0%ED_%282%29.png?type=w800"
-                        alt="" style="width: 100%;height: 400px;">
+                        alt="" style="width: 100px;height: 100px;">
                  
                 </div>
             </div>
              </div>
              
-               <div class="card" style="width: 400px;height:600px;margin-top: 150px;background-color: #f9f9f9;">
+               <div class="card" style="width: 300px;height:300px;margin-top: 150px;background-color: white;">
             <div class="mb-3">
                 <span class="text-grey fs-12" style="color: black;margin-left: 40px;font-size: 16px;">Breguet</span>
              
             </div>
-          <div class="profile" style="margin-left: 6px;">
+          <div class="profile" style="margin-left: 6px;margin: auto;">
                         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ11AtnKzqUuGwj2k6D9DdD-fFPuk7ALmw6sA&usqp=CAU"
                             alt="">
                     </div>
             <div class="mt-auto">
                 <div class="">
                      <img src=https://img.danawa.com/images/news/images/000997/20211217100822581_TR14E7ZQ.png
-                        alt="" style="width: 100%;height: 350px;">
+                        alt="" style="width: 100px;height: 50px;">
                  
                 </div>
             </div>
              </div>
              
-               <div class="card" style="width: 400px;height:600px;margin-top: 150px;background-color: #f9f9f9;">
+               <div class="card" style="width: 300px;height:300px;margin-top: 150px;background-color: white;">
             <div class="mb-3">
                 <span class="text-grey fs-12" style="color: black;margin-left: 40px;font-size: 16px;">VACHERON CONSTANTIN</span>
              
             </div>
-          <div class="profile" style="margin-left: 6px;">
+          <div class="profile" style="margin-left: 6px;margin: auto;">
                         <img src="https://boorank.com/getImage.php?l=vendor_inventory/574a/90acb24fafb2346587513cfa5cbdd40cf8d6caaf353c03aa0f977390f95d.jpg"
                             alt="">
                     </div>
             <div class="mt-auto">
                 <div class="">
                      <img src=https://m.vintageye.kr/web/product/big/202010/a9c004c98ba3ba65fdd4351312535743.png
-                        alt="" style="width: 100%;height: 400px;">
+                        alt="" style="width: 100px;height: 100px;">
                  
                 </div>
             </div>
              </div>
     
-      <div class="card" style="width: 400px;height:600px;margin-top: 150px;background-color: #f9f9f9;">
+      <div class="card" style="width: 300px;height:300px;margin-top: 150px;background-color: white;">
             <div class="mb-3">
                 <span class="text-grey fs-12" style="color: black;margin-left: 40px;font-size: 16px;">BREITLING</span>
              
             </div>
-          <div class="profile" style="margin-left: 6px;">
+          <div class="profile" style="margin-left: 6px;margin: auto;">
                         <img src="https://cdn2.chrono24.com/images/uhren/24274574-vncjgjnmp3wkvayxurneupy2-ExtraLarge.jpg"
                             alt="">
                     </div>
             <div class="mt-auto">
                 <div class="">
                      <img src="https://mblogthumb-phinf.pstatic.net/MjAxOTAyMjZfMTcw/MDAxNTUxMTUzOTE0NjUy.yEf3EZ9tQP1nxnYbxQBa2q93o5gihaBY1lVTEyCRUj8g.kS5X6y7JX4_nKI_TRWH9LH48rIAg2HhUE7cifG3ni0Ag.PNG.aojun3728/BRL1.png?type=w800"
-                        alt="" style="width: 100%;height: 400px;">
+                        alt="" style="width: 100px;height: 50px;margin-bottom: 10px;" >
                  
                 </div>
             </div>
@@ -313,9 +335,9 @@ body {
 
 
 
-
+<br>
 <hr style="margin-left: 100px;background-color: black;height: 1px;margin-top: 100px;">
- <Br><br><Br>
+ <Br>
  
 <div style="width: 1900px;height: 300px;align-items: center;display: flex;" >
 
@@ -362,9 +384,9 @@ body {
 </div>
 </div>
 
-  <Br><br><Br>
+  <Br>
   <hr style="background-color:black;height: 1px;	margin-left: 100px;">
-  <Br><br><Br>
+  <Br>
   
   <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" style="width: 1200px;height:600px;margin: auto;">
   <div class="carousel-indicators">
@@ -394,7 +416,7 @@ body {
 </div>
   
   
-   <Br><br><Br>
+   <Br>
     <hr style="background-color:black;height: 1px;	margin-left: 100px;">
      <Br><br><Br>
      
