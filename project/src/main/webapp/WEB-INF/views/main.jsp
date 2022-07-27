@@ -55,11 +55,11 @@ background-image: url("/resources/image/abc.png");
             	
         </div>
     </nav>
-    <hr style="margin-left: 100px;background: black;height: 1px;border: 0;">
+    <hr style="background-color:black;height: 1px;	margin-left: 100px;">
 <div class="peo" style="background: url('resources/image/bbb.png');width: 1900px;height: 500px;margin: auto;">
 안녕하세요
 </div>
-<hr style="margin-left: 100px;background-color: black;height: 1px;border: 0;color: black;margin-top: 100px;">
+<hr style="margin-left: 100px;background-color: black;height: 1px;margin-top: 100px;">
 <div style="width: 1900px;height: 300px;align-items: center;display: flex;" >
 <div style="width: 300px;text-align: center;align-items: center;">
 <p>신상품</p>
@@ -100,6 +100,6 @@ background-image: url("/resources/image/abc.png");
 
 </div>
 </div>
-<hr>
+  <hr style="background-color:black;height: 1px;	margin-left: 100px;">
 </body>
 </html>
