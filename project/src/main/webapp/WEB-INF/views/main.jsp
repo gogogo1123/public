@@ -94,7 +94,7 @@ background-image: url("/resources/image/abc.png");
                 <div class="product">
                     <img src="https://content.rolex.com/dam/watches/family-pages/gmt-master-ii/roller-history/professional-watches-gmt-master-ii-history-2014-red-blue_portrait.jpg?imwidth=420"
                         alt="" style="width: 250px;height: 250px;">
-                           <div class="price">$ 60.0</div>
+                           <div class="price">$ 601.0</div>
   </div>
 </div>
 
