@@ -216,7 +216,7 @@ body {
 
 <div style="width: 1600px;height: 400px;display: flex;margin-left: 400px;">
 
-    <SPAN style="margin-top: 50px;text-align: center;font-size: 24px;">브랜드별</SPAN>
+    <SPAN style="margin-top: 50px;text-align: center;font-size: 24px;font-family: 'Nanum Gothic', sans-serif;">브랜드별</SPAN>
    
     <div class="card" style="width: 300px;height:300px;margin-top: 150px;background-color:white;">
             <div class="mb-3">
@@ -359,7 +359,9 @@ body {
 <div style="width: 1900px;height: 300px;align-items: center;display: flex;" >
 
 <div style="width: 300px;text-align: center;align-items: center;">
-<p style="margin: auto;margin-left: 200px;font-size: 18px;font-family: 'Nanum Gothic', sans-serif;">신상품</p>
+<p style="margin: auto;margin-left: 200px;font-size: 24px;font-family: 'Nanum Gothic', sans-serif;">신상품
+</p>
+  <span class="text-grey fs-12" style="color: black;margin-left: 200px;font-size: 12px;">(최신등록)</span>
 </div>
 <div class="row" style="width: 1600px;margin-left: 140px;margin-right: 10px;">
 
@@ -367,7 +369,7 @@ body {
                 <div class="product">
                     <img src="resources/image1/1.webp"
                         alt="" style="width: 250px;height: 250px;">
-                           <div style="text-align:center; margin-top: 8px;"><span class="text-grey fs-12" style="color: black;margin-top:18px; font-size: 16px;text-align: right;margin-top: 6px;">BREITLING</span></div>
+                           <div style="text-align:center; margin-top: 28px;"><span class="text-grey fs-12" style="color: black;margin-top:18px; font-size: 16px;text-align: right;margin-top: 6px;">3.680.000 원</span></div>
   </div>
 </div>
 
@@ -375,7 +377,7 @@ body {
                 <div class="product">
                     <img src="resources/image1/2.jpg"
                         alt="" style="width: 250px;height: 250px;">
-                         <div style="text-align:center; margin-top: 8px;"><span class="text-grey fs-12" style="color: black;margin-top:18px; font-size: 16px;text-align: right;margin-top: 6px;">BREITLING</span></div>
+                         <div style="text-align:center; margin-top: 28px;"><span class="text-grey fs-12" style="color: black;margin-top:18px; font-size: 16px;text-align: right;margin-top: 6px;">1.680.000 원</span></div>
   </div>
 </div>
 
@@ -383,15 +385,15 @@ body {
                 <div class="product">
                     <img src="resources/image1/3.webp"
                         alt="" style="width: 250px;height: 250px;">
-                         <div style="text-align:center; margin-top: 8px;"><span class="text-grey fs-12" style="color: black;margin-top:18px; font-size: 16px;text-align: right;margin-top: 6px;">BREITLING</span></div>
+                         <div style="text-align:center; margin-top: 28px;"><span class="text-grey fs-12" style="color: black;margin-top:18px; font-size: 16px;text-align: right;margin-top: 6px;">5.680.000 원</span></div>
   </div>
 </div>
 
 <div class="col-lg-3 col-sm-6 d-flex flex-column align-items-center justify-content-center product-item my-3">
                 <div class="product">
-                    <img src="https://content.rolex.com/dam/watches/family-pages/gmt-master-ii/roller-history/professional-watches-gmt-master-ii-history-2014-red-blue_portrait.jpg?imwidth=420"
+                    <img src="resources/image1/4.jpg"
                         alt="" style="width: 250px;height: 250px;">
-                          <div style="text-align:center; margin-top: 8px;"><span class="text-grey fs-12" style="color: black;margin-top:18px; font-size: 16px;text-align: right;margin-top: 6px;">BREITLING</span></div>
+                          <div style="text-align:center; margin-top: 28px;"><span class="text-grey fs-12" style="color: black;margin-top:18px; font-size: 16px;text-align: right;margin-top: 6px;">6.680.000 원</span></div>
   </div>
 </div>
 
@@ -449,8 +451,16 @@ body {
     <hr style="background-color:black;height: 1px;	margin-left: 100px;">
         <br><br><br>
      
-  <div style="width: 1700px;height: 1600px;margin: auto;"> 
+  <div style="width: 1700px;height: 2000px;margin: auto;"> 
+  <div style="height: 200px;display: flex;justify-content: center;">
   
+  
+  
+  <div style="font-family: 'Nanum Gothic', sans-serif;font-size: 34px;">젊은 감각,대중적 인기 자랑하는 시계 컬렉션</div>
+
+  
+  
+  </div>
   
   
 <div style="height: 400px;">
