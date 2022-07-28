@@ -15,7 +15,7 @@ section .container .user .imagebox img{position:absolute;top:0;left:0;width:100%
 section .container .user .formbox{position:relative;width:50%;height:100%;background-color:#fff;display:flex;justify-content:center;align-items:center;padding:40px;transition:1s}
 section .container .user .formbox .form h2{font-size:22px;font-weight:800;letter-spacing:2px;text-transform:uppercase;text-align:center;margin-bottom:15px;color:#555}
 section .container .user .formbox .form input{position:relative;width:100%;height:50px !important;padding:0px 10px;background-color:#f5f5f5;color:#333;border:none;outline:none;margin:10px 0;box-shadow:none;letter-spacing:1px;font-weight:400;font-size:14px}
-section .container .user .formbox .form input[type='submit']{max-width:100px;background-color:#677eff;color:#fff;cursor:pointer}
+section .container .user .formbox .form input[type='button']{max-width:100px;background-color:#677eff;color:#fff;cursor:pointer}
 section .container .user .formbox .form .signup-text{position:relative;margin-top:10px;font-size:12px;letter-spacing:1px;color:#555;text-transform:uppercase}
 section .container .user .formbox .form .signup-text a{text-decoration:none;color:#677eff;cursor:pointer}section .container .signupbox{pointer-events:none}section .container.active .signupbox{pointer-events:initial}section .container .signupbox .formbox{left:100%}section .container.active .signupbox .formbox{left:0}section .container .signupbox .imagebox{left:-100%}section .container.active .signupbox .imagebox{transform:rotate(360deg);left:0}section .container.active .signupbox + .main-section{background-color:blue !important}section .container .signinbox .formbox{left:0}section .container.active .signinbox .formbox{left:100%;transform:rotate(360deg)}section .container .signinbox .imagebox{left:0}section .container.active .signinbox .imagebox{left:-100%}@media (max-width:750px){section .container{max-width:400px}section .container .imagebox{display:none}section .container .user .formbox{width:100%}}
 
@@ -30,6 +30,35 @@ section .container .user .formbox .form .signup-text a{text-decoration:none;colo
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 <script src="http://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://kit.fontawesome.com/6c060c00b1.js" crossorigin="anonymous"></script>
+
+<script>
+
+
+function check(){
+	let frm = document.frm;
+	
+	if(frm.member_id.value==""){
+		alert('아이디를 입력해주세요');
+		frm.member_id.focus();
+		return;
+	}else if(frm.member_id.value==""){
+		alert('비밀번호를 입력해주세요');
+		frm.member_pw.focus();
+		return;
+		
+	}
+	
+	frm.action = "/project/member/loginprocess.do";
+	frm.method="post";
+	frm.submit();
+	return;
+}
+
+
+</script>
+
+
+
 </head>
 <body>
 
@@ -39,7 +68,7 @@ section .container .user .formbox .form .signup-text a{text-decoration:none;colo
 
          
          
-
+<form name="frm">
 <section class="main-section"> 
 <div class="container"  style="width: 850px;">
  <div class="user signinbox"> 
@@ -49,9 +78,9 @@ section .container .user .formbox .form .signup-text a{text-decoration:none;colo
     <div class="formbox"  style="width: 500px;">
      <div class="form">
       <h2>로그인</h2>
-       <input type="text" placeholder="아이디를 입력하세요">
-        <input type="password" placeholder="비밀번호를 입력하세요">
-         <input type="submit" value="Login" style="background-color: black;"> 
+       <input type="text" placeholder="아이디를 입력하세요" name="member_id">
+        <input type="password" placeholder="비밀번호를 입력하세요" name="member_pw">
+         <input type="button" value="Login" style="background-color: black;" onclick="check();"> 
          <p class="signup-text">Don't have an account? 
          <a href="#" onClick="toggleform();"><Strong>Signup</Strong></a>
          </p> 
@@ -76,7 +105,7 @@ section .container .user .formbox .form .signup-text a{text-decoration:none;colo
             </div>
 </section>
 
-
+</form>
 
 
 
