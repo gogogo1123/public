@@ -41,16 +41,17 @@ section .container .user .formbox .form .signup-text a{text-decoration:none;colo
          
 
 <section class="main-section"> 
-<div class="container"  style="width: 850px;">
+<div class="container"  style="width: 850px;height: 800px;">
  <div class="user signinbox"> 
- <div class="imagebox" style="width: 400px;height: 500px;">
-  <img src="../resources/image2/1.png">
+ <div class="imagebox" style="width: 400px;height: 800px;">
+  <img src="../resources/image2/2.png">
    </div>
     <div class="formbox"  style="width: 500px;">
      <div class="form">
-      <h2>로그인</h2>
+      <h2>회원가입</h2>
        <input type="text" placeholder="아이디를 입력하세요">
         <input type="password" placeholder="비밀번호를 입력하세요">
+         <input type="text" placeholder="이름을 입력하세요">
          <input type="submit" value="Login" style="background-color: black;"> 
          <p class="signup-text">Don't have an account? 
          <a href="#" onClick="toggleform();"><Strong>Signup</Strong></a>
