@@ -17,6 +17,9 @@ public class MemberController {
 		
 	}
 	
-	
+	@RequestMapping("join.do")
+	public String join() {
+		return "member/join";
+	}
 	
 }

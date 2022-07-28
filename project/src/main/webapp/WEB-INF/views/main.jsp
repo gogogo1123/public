@@ -372,7 +372,7 @@ body {
         <div style="margin-right: 40px;">
            <strong> <a href="/project/member/login.do" style="color: white;">로그인</a></strong>
        
-           <strong>    <a href="#" style="color: white;">회원가입</a></strong>
+           <strong><a href="/project/member/join.do" style="color: white;">회원가입</a></strong>
 
           <a style="font-size: 28px;margin-left: 60px;"> <i class="fa-solid fa-bag-shopping"></i></a>
         </div>
