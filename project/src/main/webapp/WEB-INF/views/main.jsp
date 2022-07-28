@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+        <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+     <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -146,7 +148,7 @@ body {
 .profile img {
     width: 250px;
     height: 250px;
-
+   
     object-fit: cover;
     border-radius: 50%;
 }
@@ -161,8 +163,138 @@ body {
 <script src="http://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://kit.fontawesome.com/6c060c00b1.js" crossorigin="anonymous"></script>
 
+ <style>
+
+        @import url('https://fonts.googleapis.com/css2?family=Allerta+Stencil&display=swap');
+
+
+
+.navbar-nav>li>a{
+
+  text-transform: uppercase;
+  font-size: 12px;
+  margin-right:20px;
+  color: black;
+}
+
+
+.navbar-toggler {
+    padding: .20rem .50rem;
+    font-size: 1.25rem;
+    line-height: 1;
+    background-color: transparent;
+    border: 1px solid bl;
+
+    }
+
+    .nav-link{
+
+      color:black !important;
+    }
+
+
+.wrapper{
+      width: 100%;
+    position: absolute;
+    height: 100%;
+    background-color: #000;
+    clip-path: polygon(81% 0, 100% 0, 100% 50%, 100% 100%, 71% 100%);
+    transition: 1s all;
+}
+
+.navbar-brand{
+
+  color:black;
+  font-family: 'Allerta Stencil', sans-serif;
+  margin-bottom: 4px;
+  font-size: 27px;
+}
+
+.navbar-red:hover .wrapper{
+
+  clip-path: polygon(81% 0, 100% 0, 100% 50%, 100% 100%, 65% 100%);
+
+}
+
+.navbar-brand:hover{
+
+  color:black;;
+  
+}
+
+.navbar-red{
+
+  background-color: #fff;
+  color: black;
+
+}
+
+.all-show{
+
+  z-index: 10;
+}
+
+
+    </style>
 
 </head>
+
+
+
+
+
+ <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
+
+    <!-- Demo styles -->
+    <style>
+      html,
+      body {
+        position: relative;
+        height: 100%;
+      }
+
+      body {
+        background: #eee;
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color: #000;
+        margin: 0;
+        padding: 0;
+      }
+
+      .swiper {
+        width: 100%;
+        padding-top: 50px;
+        padding-bottom: 50px;
+      }
+
+      .swiper-slide {
+        background-position: center;
+        background-size: cover;
+        width: 300px;
+        height: 300px;
+      }
+
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+      }
+    </style>
+
+
+
+
+
+
+
+
+
+
+
 
 
 <body>
@@ -186,16 +318,83 @@ body {
 
 
 
+<!-- nav -->
 
 
-
-<nav style="background-image: url('resources/image/a.png');width: 1850px;height: 60px;margin: auto;">
-
-      <div style="background-image: url('resources/image/a.png');width: 1850px;height: 60px;">
-       
-            	
+ <nav class="navbar navbar-expand-lg navbar-red navbar-dark">
+        <div class="wrapper">
+          
         </div>
-    </nav>
+  <div class="container-fluid all-show">
+    <a class="navbar-brand" href="#" style="color: black">다있쏘 <i class="fa fa-codepen"></i></a>
+    
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon">
+
+        
+      </span>
+
+
+      
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">About us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Products</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#">Services</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#">Events</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#">contact</a>
+        </li>
+
+        
+        
+        
+      </ul>
+      <div class="d-flex flex-column sim" style="margin-left: 290px;font-size: 40px;">
+
+        <span><i class="fa-solid fa-crown"></i></span>
+        
+        
+      </div>
+
+      <div class="d-flex" style="margin-left: 700px;color: white;">
+
+        <div style="margin-right: 40px;">
+        
+        <c:if test="${sessionScope.member_id ==null }">
+        
+           <strong> <a href="/project/member/login.do" style="color: white;">로그인</a></strong>
+       
+           <strong><a href="/project/member/join.do" style="color: white;">회원가입</a></strong>
+        </c:if>   
+           
+             <c:if test="${sessionScope.member_id !=null }">
+        
+           ${sessionScope.name}(${sessionScope.member_id}) 님 어서오세요
+       
+           <strong><a href="/project/member/logout.do" style="color: white;">로그아웃</a></strong>
+        </c:if>   
+
+          <a style="font-size: 28px;margin-left: 60px;"> <i class="fa-solid fa-bag-shopping"></i></a>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</nav>
 
  
 <!-- <div class="peo" style="background: url('resources/image/cc.jpg') no-repeat ;width: 1800px;height: 500px;margin: auto;margin-top: 30px;">
@@ -434,7 +633,12 @@ body {
   
   <hr style="background-color:black;height: 1px;	margin-left: 100px;">
 
+
+  <br><br><br>
+
+
   
+<<<<<<< HEAD
 <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" style="width: 1000px;">
   <div class="carousel-indicators">
     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -444,7 +648,43 @@ body {
   <div class="carousel-inner">
     <div class="carousel-item active">
       <img src="resources/image1/1.webp" style="width: 150px;height: 150px;">
+=======
+ <!-- Swiper -->
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
+          <span>ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ</span>
+        </div>
+        <div class="swiper-slide">
+          <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+        </div>
+        <div class="swiper-slide">
+          <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+        </div>
+        <div class="swiper-slide">
+          <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
+        </div>
+        <div class="swiper-slide">
+          <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
+        </div>
+        <div class="swiper-slide">
+          <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
+        </div>
+        <div class="swiper-slide">
+          <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
+        </div>
+        <div class="swiper-slide">
+          <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
+        </div>
+        <div class="swiper-slide">
+          <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+>>>>>>> branch 'master' of https://github.com/gogogo1123/public.git
     </div>
+<<<<<<< HEAD
     <div class="carousel-item">
       <img src="resources/image/2.jpg"  style="width: 150px;height: 150px;" >
     </div>
@@ -461,13 +701,43 @@ body {
     <span class="visually-hidden">Next</span>
   </button>
 </div>
+=======
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        effect: "coverflow",
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: "auto",
+        coverflowEffect: {
+          rotate: 50,
+          stretch: 0,
+          depth: 100,
+          modifier: 1,
+          slideShadows: true,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+        },
+      });
+    </script>
+>>>>>>> branch 'master' of https://github.com/gogogo1123/public.git
   
 
      
      
      
      
+     
+     
+     
+     
       <br><br><br>
+      
     <hr style="background-color:black;height: 1px;	margin-left: 100px;">
         <br><br><br>
      
