@@ -328,15 +328,15 @@ body {
   <div class="container-fluid all-show">
     <a class="navbar-brand" href="#" style="color: black">다있쏘 <i class="fa fa-codepen"></i></a>
     
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon">
+    
+      
 
         
-      </span>
+      
 
 
       
-    </button>
+
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
         <li class="nav-item">
@@ -362,29 +362,24 @@ body {
         
         
       </ul>
-      <div class="d-flex flex-column sim" style="margin-left: 290px;font-size: 40px;">
 
-        <span><i class="fa-solid fa-crown"></i></span>
-        
-        
-      </div>
 
-      <div class="d-flex" style="margin-left: 700px;color: white;">
+     <div class="d-flex">
 
         <div style="margin-right: 40px;">
         
         <c:if test="${sessionScope.member_id ==null }">
         
-           <strong> <a href="/project/member/login.do" style="color: white;">로그인</a></strong>
+           <strong> <a href="/project/member/login.do" style="color: black;margin-left: 200px;">로그인</a></strong>
        
-           <strong><a href="/project/member/join.do" style="color: white;">회원가입</a></strong>
+           <strong><a href="/project/member/join.do" style="color: black;">회원가입</a></strong>
         </c:if>   
            
              <c:if test="${sessionScope.member_id !=null }">
         
            ${sessionScope.name}(${sessionScope.member_id}) 님 어서오세요
        
-           <strong><a href="/project/member/logout.do" style="color: white;">로그아웃</a></strong>
+           <strong><a href="/project/member/logout.do" style="color: black;">로그아웃</a></strong>
         </c:if>   
 
           <a style="font-size: 28px;margin-left: 60px;"> <i class="fa-solid fa-bag-shopping"></i></a>
@@ -638,17 +633,8 @@ body {
 
 
   
-<<<<<<< HEAD
-<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" style="width: 1000px;">
-  <div class="carousel-indicators">
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-  </div>
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="resources/image1/1.webp" style="width: 150px;height: 150px;">
-=======
+
+
  <!-- Swiper -->
     <div class="swiper mySwiper">
       <div class="swiper-wrapper">
@@ -682,26 +668,10 @@ body {
         </div>
       </div>
       <div class="swiper-pagination"></div>
->>>>>>> branch 'master' of https://github.com/gogogo1123/public.git
+
     </div>
-<<<<<<< HEAD
-    <div class="carousel-item">
-      <img src="resources/image/2.jpg"  style="width: 150px;height: 150px;" >
-    </div>
-    <div class="carousel-item">
-      <img src="resources/image1/3.webp" style="width: 250px;height: 250px;" >
-    </div>
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev" style="color: black;">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div>
-=======
+
+
 
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
@@ -713,6 +683,7 @@ body {
         grabCursor: true,
         centeredSlides: true,
         slidesPerView: "auto",
+        autoplay:{delay:350},
         coverflowEffect: {
           rotate: 50,
           stretch: 0,
@@ -725,7 +696,7 @@ body {
         },
       });
     </script>
->>>>>>> branch 'master' of https://github.com/gogogo1123/public.git
+
   
 
      
