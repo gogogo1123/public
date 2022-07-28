@@ -370,7 +370,7 @@ body {
       <div class="d-flex" style="margin-left: 700px;color: white;">
 
         <div style="margin-right: 40px;">
-           <strong> <a href="#" style="color: white;">로그인</a></strong>
+           <strong> <a href="/project/member/login.do" style="color: white;">로그인</a></strong>
        
            <strong>    <a href="#" style="color: white;">회원가입</a></strong>
 
@@ -630,6 +630,7 @@ body {
       <div class="swiper-wrapper">
         <div class="swiper-slide">
           <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
+          <span>ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ</span>
         </div>
         <div class="swiper-slide">
           <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
