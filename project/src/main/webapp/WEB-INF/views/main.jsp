@@ -146,7 +146,7 @@ body {
 .profile img {
     width: 250px;
     height: 250px;
-
+   
     object-fit: cover;
     border-radius: 50%;
 }
@@ -236,6 +236,63 @@ body {
     </style>
 
 </head>
+
+
+
+
+
+ <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
+
+    <!-- Demo styles -->
+    <style>
+      html,
+      body {
+        position: relative;
+        height: 100%;
+      }
+
+      body {
+        background: #eee;
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color: #000;
+        margin: 0;
+        padding: 0;
+      }
+
+      .swiper {
+        width: 100%;
+        padding-top: 50px;
+        padding-bottom: 50px;
+      }
+
+      .swiper-slide {
+        background-position: center;
+        background-size: cover;
+        width: 300px;
+        height: 300px;
+      }
+
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+      }
+    </style>
+
+
+
+
+
+
+
+
+
+
+
 
 
 <body>
@@ -563,33 +620,67 @@ body {
   
   <hr style="background-color:black;height: 1px;	margin-left: 100px;">
 
+
+  <br><br><br>
+
+
   
-  <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" style="width: 1200px;height:600px;margin: auto;">
-  <div class="carousel-indicators">
-    <button type="button" style="background-color: black;border-radius: 50%;height: 10px;width: 10px;" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-    <button type="button" style="background-color: black;border-radius: 50%;height: 5px;width: 5px;" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-    <button type="button" style="background-color: black;border-radius: 50%;height: 5px;width: 5px;" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-  </div>
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img style="width: 300px;height: 250px;margin-left: 440px;margin-top: 90px;"  src="https://www.autodaily.co.kr/news/photo/202010/422646_60139_56.png">
+ <!-- Swiper -->
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
+        </div>
+        <div class="swiper-slide">
+          <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+        </div>
+        <div class="swiper-slide">
+          <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+        </div>
+        <div class="swiper-slide">
+          <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
+        </div>
+        <div class="swiper-slide">
+          <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
+        </div>
+        <div class="swiper-slide">
+          <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
+        </div>
+        <div class="swiper-slide">
+          <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
+        </div>
+        <div class="swiper-slide">
+          <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
+        </div>
+        <div class="swiper-slide">
+          <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
     </div>
-    <div class="carousel-item">
-      <img src="https://www.autodaily.co.kr/news/photo/202010/422646_60139_56.png"  alt="..." style="width: 50px;height: 350px;margin-left: 440px;margin-top: 90px;">
-    </div>
-    <div class="carousel-item">
-      <img src="https://www.autodaily.co.kr/news/photo/202010/422646_60139_56.png"  alt="" style="width: 350px;height: 350px;margin-left: 440px;margin-top: 90px;">
-    </div>
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev" style="border-color: black;color: black;">
-    <span class="carousel-control-prev-icon-dark" aria-hidden="true" style="color: black;background-color: gray;background: gray;"></span>
-    <span class="visually-hidden" style="color: black;background: black;">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        effect: "coverflow",
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: "auto",
+        coverflowEffect: {
+          rotate: 50,
+          stretch: 0,
+          depth: 100,
+          modifier: 1,
+          slideShadows: true,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+        },
+      });
+    </script>
   
   
 
@@ -597,7 +688,12 @@ body {
      
      
      
+     
+     
+     
+     
       <br><br><br>
+      
     <hr style="background-color:black;height: 1px;	margin-left: 100px;">
         <br><br><br>
      
