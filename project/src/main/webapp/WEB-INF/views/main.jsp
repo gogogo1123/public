@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+        <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+     <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -370,9 +372,20 @@ body {
       <div class="d-flex" style="margin-left: 700px;color: white;">
 
         <div style="margin-right: 40px;">
+        
+        <c:if test="${sessionScope.member_id ==null }">
+        
            <strong> <a href="/project/member/login.do" style="color: white;">로그인</a></strong>
        
            <strong><a href="/project/member/join.do" style="color: white;">회원가입</a></strong>
+        </c:if>   
+           
+             <c:if test="${sessionScope.member_id !=null }">
+        
+           ${sessionScope.name}(${sessionScope.member_id}) 님 어서오세요
+       
+           <strong><a href="/project/member/logout.do" style="color: white;">로그아웃</a></strong>
+        </c:if>   
 
           <a style="font-size: 28px;margin-left: 60px;"> <i class="fa-solid fa-bag-shopping"></i></a>
         </div>

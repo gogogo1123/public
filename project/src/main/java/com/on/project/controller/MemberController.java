@@ -47,6 +47,14 @@ public class MemberController {
 	}
 	
 	
+	
+	@RequestMapping("logout.do")
+	public String logout(HttpSession session) {
+		session.invalidate(); // 세션값을 삭제시킴
+		return "redirect:/main.do"; // 메인페이지로 이동 시킴.
+	}
+	
+	
 	@RequestMapping("join.do")
 	public String join() {
 		return "member/join"; // 회원가입으로 이동하는 로직을 실행.
