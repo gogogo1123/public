@@ -1,5 +1,7 @@
 package com.on.project.dao;
 
+import java.util.List;
+
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -26,6 +28,13 @@ public class ProductDao {
 	
 	public void register(ProductVo vo) {
 		sqlSession.insert(MAPPER+".register",vo);
+	}
+
+
+
+
+	public List<ProductVo> list() {
+		return sqlSession.selectList(MAPPER+".list");
 	}
 
 	

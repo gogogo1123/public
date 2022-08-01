@@ -1,6 +1,7 @@
 package com.on.project.controller;
 
 import java.io.File;
+import java.util.List;
 
 import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
@@ -8,6 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
 
 import com.on.project.serivce.ProductService;
 import com.on.project.vo.ProductVo;
@@ -63,6 +65,19 @@ public class ProductController {
 		
 		
 	}
+	
+	
+	@RequestMapping("list.do")
+	public ModelAndView list(ModelAndView mav) {
+		
+		
+		List<ProductVo> list = productService.list(); // 상품 리스트 뽑아오기
+		mav.addObject("list", list);
+		mav.setViewName("shop/product_list");
+		return mav;
+		
+	}
+	
 	
 	
 	
