@@ -41,7 +41,7 @@ function check(){
 		alert('아이디를 입력해주세요');
 		frm.member_id.focus();
 		return;
-	}else if(frm.member_pw.value==""){
+	}else if(frm.member_id.value==""){
 		alert('비밀번호를 입력해주세요');
 		frm.member_pw.focus();
 		return;
@@ -70,21 +70,23 @@ function check(){
          
 <form name="frm">
 <section class="main-section"> 
-<div class="container"  style="width: 850px;">
+<div class="container"  style="width: 550px;">
  <div class="user signinbox"> 
- <div class="imagebox" style="width: 400px;height: 500px;">
-  <img src="../resources/image2/1.png">
-   </div>
-    <div class="formbox"  style="width: 500px;">
+    <div class="formbox"  style="width: 550px;">
      <div class="form">
-      <h2>로그인</h2>
-       <input type="text" placeholder="아이디를 입력하세요" name="member_id">
-        <input type="password" placeholder="비밀번호를 입력하세요" name="member_pw">
+      <h2>상품등록</h2>
+      <label>상품명</label>
+       <input type="text" placeholder="상품이름을 입력하세요" name="product_name">
+        <label>상품수량</label>
+        <input type="password" placeholder="상품 수량을 입력하세요" name="product_amount">
+         <label>상품가격</label>
+         <input type="text" placeholder="상품가격을 입력하세요" name="product_price">
+          <label>상품이미지</label>
+         <input type="file" name="file1">
+         <input type="button" value="상품추가" style="background-color: black;" onclick="check();"> 
 
-         <input type="button" value="Login" style="background-color: black;" onclick="check();"> 
-         <p class="signup-text">Don't have an account? 
-         <a href="#" onClick="toggleform();"><Strong>Signup</Strong></a>
-         </p> 
+   
+     
          </div> 
          </div> 
          </div> 
