@@ -37,18 +37,25 @@ section .container .user .formbox .form .signup-text a{text-decoration:none;colo
 function check(){
 	let frm = document.frm;
 	
-	if(frm.member_id.value==""){
-		alert('아이디를 입력해주세요');
-		frm.member_id.focus();
+	if(frm.product_name.value==""){
+		alert('상풍명을 입력해주세요');
+		frm.product_name.focus();
 		return;
-	}else if(frm.member_id.value==""){
-		alert('비밀번호를 입력해주세요');
-		frm.member_pw.focus();
+	}else if(frm.product_amount.value==""){
+		alert('수량을 입력해주세요');
+		frm.product_amount.focus();
+		return;
+		
+	}else if(frm.product_price.value==""){
+		alert('금액을 입력해주세요');
+		frm.product_price.focus();
 		return;
 		
 	}
 	
-	frm.action = "/project/member/loginprocess.do";
+	
+	frm.action = "/project/product/insert.do";
+	frm.enctype="multipart/form-data"; //파일보낼때 꼭 써줘야함 업로드할때!! 안그러면 안넘어가니 주의 !!
 	frm.method="post";
 	frm.submit();
 	return;
@@ -78,7 +85,7 @@ function check(){
       <label>상품명</label>
        <input type="text" placeholder="상품이름을 입력하세요" name="product_name">
         <label>상품수량</label>
-        <input type="password" placeholder="상품 수량을 입력하세요" name="product_amount">
+        <input type="number" placeholder="상품 수량을 입력하세요" name="product_amount">
          <label>상품가격</label>
          <input type="text" placeholder="상품가격을 입력하세요" name="product_price">
           <label>상품이미지</label>

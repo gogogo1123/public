@@ -374,16 +374,16 @@ body {
         
         <c:if test="${sessionScope.member_id ==null }">
         
-           <strong> <a href="/project/member/login.do" style="color: black;margin-left: 200px;">로그인</a></strong>
+           <strong> <a href="/project/member/login.do" style="color: white;margin-left: 200px;">로그인</a></strong>
        
-           <strong><a href="/project/member/join.do" style="color: black;">회원가입</a></strong>
+           <strong><a href="/project/member/join.do" style="color: white;">회원가입</a></strong>
         </c:if>   
            
              <c:if test="${sessionScope.member_id !=null }">
         
            ${sessionScope.name}님 어서오세요
        
-           <strong><a href="/project/member/logout.do" style="color: black;">로그아웃</a></strong>
+           <strong><a href="/project/member/logout.do" style="color: white;">로그아웃</a></strong>
         </c:if>   
 
           <a style="font-size: 28px;margin-left: 60px;"> <i class="fa-solid fa-bag-shopping"></i></a>
