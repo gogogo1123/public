@@ -369,7 +369,7 @@ body {
         
       </div>
 
-      <div class="d-flex" style="margin-left: 700px;color: white;">
+      <div class="d-flex" style="margin-left: 800px;color: white;">
 
         <div style="margin-right: 40px;">
         
@@ -382,7 +382,7 @@ body {
            
              <c:if test="${sessionScope.member_id !=null }">
         
-           ${sessionScope.name}(${sessionScope.member_id}) 님 어서오세요
+           ${sessionScope.name}님 어서오세요
        
            <strong><a href="/project/member/logout.do" style="color: white;">로그아웃</a></strong>
         </c:if>   
