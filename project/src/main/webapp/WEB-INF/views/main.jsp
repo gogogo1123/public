@@ -364,11 +364,11 @@ body {
       </ul>
 
 
-<<<<<<< HEAD
+
       <div class="d-flex" style="margin-left: 800px;color: white;">
-=======
+
      <div class="d-flex">
->>>>>>> branch 'master' of https://github.com/gogogo1123/public
+
 
         <div style="margin-right: 40px;">
         
