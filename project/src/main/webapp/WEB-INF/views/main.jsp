@@ -559,7 +559,7 @@ body {
 
 
 
-
+	
 
 
 
@@ -639,37 +639,31 @@ body {
   
 
 
- <!-- Swiper -->
+ 
+
+  <!-- Swiper -->
     <div class="swiper mySwiper">
+
       <div class="swiper-wrapper">
+      
+          <Div class="profile">
         <div class="swiper-slide">
-          <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
-          <span>ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ</span>
+          <img src="resources/image1/1.webp" />
+        </div>
         </div>
         <div class="swiper-slide">
-          <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+          <img src="resources/image1/2.jpg" />
         </div>
         <div class="swiper-slide">
-          <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+          <img src="resources/image1/3.webp" />
         </div>
         <div class="swiper-slide">
-          <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
+          <img src="resources/image1/4.jpg" />
         </div>
-        <div class="swiper-slide">
-          <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
-        </div>
-        <div class="swiper-slide">
-          <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
-        </div>
-        <div class="swiper-slide">
-          <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
-        </div>
-        <div class="swiper-slide">
-          <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
-        </div>
-        <div class="swiper-slide">
-          <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
-        </div>
+       
+       
+      
+       
       </div>
       <div class="swiper-pagination"></div>
 
@@ -700,8 +694,6 @@ body {
         },
       });
     </script>
-
-  
 
      
      
