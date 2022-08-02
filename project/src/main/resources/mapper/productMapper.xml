@@ -8,7 +8,7 @@
 
 <insert id="register">
 
-insert into producttable(product_name,product_amount,product_price,filename) values(#{product_name},#{product_amount},#{product_price},#{filename})
+insert into producttable(product_name,product_amount,product_price,filename,product_brand) values(#{product_name},#{product_amount},#{product_price},#{filename},#{product_brand})
 
 
 </insert>
@@ -19,4 +19,30 @@ insert into producttable(product_name,product_amount,product_price,filename) val
 	
 	</select>
 	
+	
+	<select id="edit" parameterType="int" resultType="com.on.project.vo.ProductVo">
+	
+	select * from producttable where product_code=#{product_code}
+	
+	</select>
+	
+	
+	<update id="update">
+	
+	update producttable set product_name=#{product_name},product_amount=#{product_amount},product_price=#{product_price},filename=#{filename},product_brand=#{product_brand}
+	
+	</update>
+	
+	<select id="file" resultType="String">
+	
+	select filename from producttable where product_code=#{product_code}
+	
+	</select>
+	
+	
+	<delete id="delete">
+	
+	delete from producttable where product_code=#{product_code}
+	
+	</delete>
 </mapper>

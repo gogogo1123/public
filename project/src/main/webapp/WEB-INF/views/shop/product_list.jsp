@@ -10,6 +10,8 @@
 
 <style>
 
+
+
 /* Importing fonts from Google */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Kalam&display=swap');
 
@@ -22,7 +24,8 @@
 }
 
 body {
-    background: #f9f9f9;
+    background: #eee;
+   
 }
 
 .container {
@@ -380,7 +383,7 @@ body {
     
         <div class="profile">
              
-
+<a href="<%=request.getContextPath()%>/product/write.do"><button type="button">상품등록</button></a>
       
        
           
@@ -395,21 +398,15 @@ body {
                         <div>
                             
                             <div class="product-pic" style="margin-top: 50px;">
-                                <img class="pic1" src="../resources/image1/2.jpg" style="width: 250px;height: 250px;">
+                                <img class="pic1" src="../resources/images/${row.filename}" style="width: 250px;height: 250px;">
                             </div>
                             
                             <div style="margin-top: 100px;text-align: center;">
-                            <small class="category" style="margin-top: 100px;">Shoes</small>
-                            <h5 class="product-name">Leather Men's Sneakers</h5>
+                            <small class="category" style="margin-top: 100px;">${row.product_brand}</small><span><a href="<%=request.getContextPath()%>/product/edit/${row.product_code}"><button type="button">수정</button></a></span>
+                            <h5 class="product-name">${row.product_name}</h5>
                             <div class="row px-3 justify-content-between">
-                                <p class="price">$45.99</p>
-                                <div class="stars">
-                                    <span class="fa fa-star star-active"></span>
-                                    <span class="fa fa-star star-active"></span>
-                                    <span class="fa fa-star star-active"></span>
-                                    <span class="fa fa-star"></span>
-                                    <span class="fa fa-star"></span>
-                                    </div>
+                                <p class="price">${row.product_price}</p>
+                               
                                 </div>
                             </div>
                         </div>

@@ -11,6 +11,20 @@ public class ProductVo {
 	private String product_name;
 	private int product_amount;
 	private int product_price;
+	private String product_brand;
+	
+	
+	
+	
+	
+	
+	
+	public String getProduct_brand() {
+		return product_brand;
+	}
+	public void setProduct_brand(String product_brand) {
+		this.product_brand = product_brand;
+	}
 	public int getProduct_code() {
 		return product_code;
 	}

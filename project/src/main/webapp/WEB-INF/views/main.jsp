@@ -343,7 +343,7 @@ body {
           <a class="nav-link active" aria-current="page" href="#">About us</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Products</a>
+          <a class="nav-link" href="<%=request.getContextPath()%>/product/list.do">Products</a>
         </li>
 
         <li class="nav-item">
@@ -374,16 +374,16 @@ body {
         
         <c:if test="${sessionScope.member_id ==null }">
         
-           <strong> <a href="/project/member/login.do" style="color: white;margin-left: 200px;">로그인</a></strong>
+           <strong> <a href="<%=request.getContextPath() %>/member/login.do" style="color: white;margin-left: 200px;">로그인</a></strong>
        
-           <strong><a href="/project/member/join.do" style="color: white;">회원가입</a></strong>
+           <strong><a href="<%=request.getContextPath() %>/member/join.do" style="color: white;">회원가입</a></strong>
         </c:if>   
            
              <c:if test="${sessionScope.member_id !=null }">
         
            ${sessionScope.name}님 어서오세요
        
-           <strong><a href="/project/member/logout.do" style="color: white;">로그아웃</a></strong>
+           <strong><a href="<%=request.getContextPath() %>/member/logout.do" style="color: white;">로그아웃</a></strong>
         </c:if>   
 
           <a style="font-size: 28px;margin-left: 60px;"> <i class="fa-solid fa-bag-shopping"></i></a>
