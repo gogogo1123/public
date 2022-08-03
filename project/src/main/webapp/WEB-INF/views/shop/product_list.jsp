@@ -8,6 +8,127 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 
+<style>
+
+
+
+/* Importing fonts from Google */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Kalam&display=swap');
+
+/* Reseting */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #eee;
+   
+}
+
+.container {
+    overflow: auto;
+}
+
+.cards {
+    overflow: auto;
+    min-height: 550px;
+}
+
+.card {
+    background: white;
+    background: white;
+    min-width: 150px;
+    height: 200px;
+    border-radius: 10px;
+    box-shadow: -1px 1px 5px #0000009d;
+    padding: 0px;
+    border: none;
+    transition: all .3s ease-in-out;
+}
+
+.card .text-grey {
+    color: #ccc;
+    font-weight: 500;
+}
+
+.card .light-grey {
+    color: #aaa;
+    font-weight: 300;
+}
+
+.card .fs-5 {
+    font-size: 1.15rem !important;
+}
+
+.card a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.card .profile img {
+    width: 200px;
+    height: 200px;
+    box-shadow: 0 5px 15px rgba(26, 25, 25, 0.329);
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+
+.card:not(:first-child) {
+    margin-left: -8rem;
+}
+
+.cards::-webkit-scrollbar {
+    height: 10px;
+}
+
+.cards::-webkit-scrollbar-track {
+    background: inherit;
+}
+
+.cards::-webkit-scrollbar-thumb {
+    background-color: #3a3a3a;
+    background: linear-gradient(to right, #ff002b, #002fff);
+    /* background: ; */
+    border-radius: 10px;
+}
+
+
+.card:hover,
+.card:focus-within {
+    transform: translateY(-10rem) rotateZ(0deg);
+}
+
+.card:hover~.card,
+.card:focus-within~.card {
+    transform: translateX(10rem);
+}
+
+.card .designation {
+    display: inline;
+    border-radius: 10px;
+    padding: 4px 10px;
+    border: 1px solid #ddd;
+}
+
+
+
+
+.profile img {
+    width: 250px;
+    height: 250px;
+     box-shadow: 0 5px 15px rgba(26, 25, 25, 0.329);
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+
+
+</style>
+
  <style>
 
         @import url('https://fonts.googleapis.com/css2?family=Allerta+Stencil&display=swap');
@@ -256,27 +377,60 @@ body {
 </nav>
 
 
-<div class="container-fluid px-1 py-5 mx-auto">
-    <div class="row justify-content-center">
-        <div class="col-md-9 col-sm-12">
+  
+   
+   
+    
+        <div class="profile">
+             
+<a href="<%=request.getContextPath()%>/product/write.do"><button type="button">상품등록</button></a>
       
+       
+          
+          
+          <div class="container-fluid px-1 py-5 mx-auto">
+    <div class="row">
+        <div class="col-md-12 col-sm-12">
+            <div>
                 <div class="row">
+                     <c:forEach var="row" items="${list}">
                     <div class="col-md-3 col-lg-3">
-                        <div class="card">
-                            <div class="pr-3 row justify-content-end">
-                                <div class="fa fa-heart like like-checked"></div>
+                        <div>
+                            
+                            <div class="product-pic" style="margin-top: 50px;">
+                                <img class="pic1" src="../resources/images/${row.filename}" style="width: 250px;height: 250px;">
                             </div>
-                            <div class="product-pic">
-                                <img class="pic1" src="https://i.imgur.com/EaNHGjT.png">
-                            </div>
-                            <small class="category">Shoes</small>
-                            <h5 class="product-name">Leather Men's Sneakers</h5>
+                            
+                            <div style="margin-top: 100px;text-align: center;">
+                            <small class="category" style="margin-top: 100px;">${row.product_brand}</small><span><a href="<%=request.getContextPath()%>/product/edit/${row.product_code}"><button type="button">수정</button></a></span>
+                            <h5 class="product-name">${row.product_name}</h5>
                             <div class="row px-3 justify-content-between">
-                                <p class="price">$45.99</p> 
+                                <p class="price">${row.product_price}</p>
+                               
+                                </div>
                             </div>
                         </div>
                     </div>
-                   
+          
+          
+        
+          
+          
+          
+
+ </c:forEach>    
+  </div>
+  
+</div>
+
+    
+</div>
+      </div>
+  </div>    
+      
+           </div>
+       
+    
                     
                     
                     
@@ -289,11 +443,9 @@ body {
                     
                     
                     
-                    
-                </div>
-            </div>
-        </div>
-    </div>
+             
+        
+  
 
 
 

@@ -8,7 +8,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 *{padding:0;margin:0;font-family: 'Poppins', sans-serif}
 section{position:relative;min-height:100vh;background-color:white;display:flex;justify-content:center;align-items:center;padding:20px}
-section .container{overflow:hidden;position:relative;width:800px;height:600px;background-color:white;box-shadow:0 15px 50px rgba(0,0,0,0.1)}
+section .container{overflow:hidden;position:relative;width:800px;height:900px;background-color:white;box-shadow:0 15px 50px rgba(0,0,0,0.1)}
 section .container .user{position:absolute;top:0;left:0;width:100%;height:100%;display:flex}
 section .container .user .imagebox{position:relative;width:50%;height:100%;transition:1s}
 section .container .user .imagebox img{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover}
@@ -34,36 +34,35 @@ section .container .user .formbox .form .signup-text a{text-decoration:none;colo
 <script>
 
 
-function check(){
-	let frm = document.frm;
+function update() {
+	alert('눌림')
+	var product_name = document.frm.product_name.value;
+	var product_amount = document.frm.product_amount.value;
+	var product_price = document.frm.product_price.value;
+	var product_brand = document.frm.product_brand.value;
 	
-	if(frm.product_name.value==""){
-		alert('상풍명을 입력해주세요');
-		frm.product_name.focus();
-		return;
-	}else if(frm.product_amount.value==""){
-		alert('수량을 입력해주세요');
-		frm.product_amount.focus();
-		return;
-		
-	}else if(frm.product_price.value==""){
-		alert('금액을 입력해주세요');
-		frm.product_price.focus();
-		return;
-		
-	}
-	
-	
-	frm.action = "/project/product/insert.do";
-	frm.enctype="multipart/form-data"; //파일보낼때 꼭 써줘야함 업로드할때!! 안그러면 안넘어가니 주의 !!
-	frm.method="post";
-	frm.submit();
-	return;
+	document.frm.action="<%=request.getContextPath()%>/product/update.do"
+	document.frm.enctype="multipart/form-data";
+	document.frm.submit();
 }
+
+
+
 
 
 </script>
 
+<script type="text/javascript">
+
+function delete1() {
+	if(confirm("삭제하시겠습니까?")){
+		document.frm.action="<%=request.getContextPath()%>/product/delete.do";
+		document.frm.submit();
+	}
+}
+
+
+</script>
 
 
 </head>
@@ -75,19 +74,20 @@ function check(){
 
          
          
-<form name="frm">
+<form name="frm" method="post" enctype="multipart/form-data" id="frm">
+<input type="hidden" name="product_code" value="${product_code}">
 <section class="main-section"> 
 <div class="container"  style="width: 550px;">
  <div class="user signinbox"> 
     <div class="formbox"  style="width: 550px;">
      <div class="form">
-      <h2>상품등록</h2>
+      <h2>상품수정</h2>
       <label>상품명</label>
-       <input type="text" placeholder="상품이름을 입력하세요" name="product_name">
+       <input type="text" placeholder="상품이름을 입력하세요" name="product_name" value="${list.product_name}">
         <label>상품수량</label>
-        <input type="number" placeholder="상품 수량을 입력하세요" name="product_amount">
+        <input type="number" placeholder="상품 수량을 입력하세요" name="product_amount" value="${list.product_amount}">
          <label>상품가격</label>
-         <input type="text" placeholder="상품가격을 입력하세요" name="product_price">
+         <input type="text" placeholder="상품가격을 입력하세요" name="product_price" value="${list.product_price}">
           <label>브랜드</label>
            <div class="input-group mb-3">
                         <select class="form-select bg-light form-control" name="product_brand">
@@ -101,18 +101,19 @@ function check(){
                 </div>
           <label>상품이미지</label>
          <input type="file" name="file1">
-         <input type="button" value="상품추가" style="background-color: black;" onclick="check();"> 
-
-   
-     
+       
+         <input type="button" value="상품수정" style="background-color: black;margin-top: 100px;margin-left: 25px;" onclick="update()">
+          <input type="button" value="상품삭제" style="background-color: gray;margin-top: 100px;margin-left: 5px;" onclick="delete1()">  
+         <img alt="" src="<%=request.getContextPath()%>/resources/images/${list.filename}" style="width:230px;height: 200px;float: right;">
+     <input type="button" value="목록으로" style="background-color: gray;margin-top: 100px;margin-left: 180px;" onclick="location.href='<%=request.getContextPath()%>/product/list.do'"> 
          </div> 
          </div> 
          </div> 
-        
+      
             </div>
 </section>
 
-</form>
+  </form>
 
 
 
