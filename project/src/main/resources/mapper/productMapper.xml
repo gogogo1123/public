@@ -45,4 +45,10 @@ insert into producttable(product_name,product_amount,product_price,filename,prod
 	delete from producttable where product_code=#{product_code}
 	
 	</delete>
+	
+	<select id="detail" resultType="com.on.project.vo.ProductVo">
+	
+	select * from producttable where product_code = #{product_code}
+	
+	</select>
 </mapper>

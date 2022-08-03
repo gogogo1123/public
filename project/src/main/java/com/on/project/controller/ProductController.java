@@ -129,6 +129,15 @@ public class ProductController {
 		
 	}
 	
+	@RequestMapping("detail/{product_code}")
+	public ModelAndView detail(@PathVariable("product_code") int product_code,ModelAndView mav) {
+		
+		mav.addObject("vo", productService.detail(product_code));
+		mav.setViewName("shop/product_detail");
+		
+		return mav;
+		
+	}
 	
 	
 }
