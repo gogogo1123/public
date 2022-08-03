@@ -46,4 +46,9 @@ public class HomeController {
 		return "shop/product_list";
 	}
 	
+	
+	@RequestMapping("detail.do")
+	public String deta() {
+		return "shop/product_detail";
+	}
 }

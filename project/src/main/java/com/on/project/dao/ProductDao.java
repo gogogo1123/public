@@ -65,6 +65,13 @@ public class ProductDao {
           sqlSession.delete(MAPPER+".delete", product_code);		
 	}
 
+
+
+
+	public ProductVo detail(int product_code) {
+		return sqlSession.selectOne(MAPPER+".detail", product_code);
+	}
+
 	
 	
 	

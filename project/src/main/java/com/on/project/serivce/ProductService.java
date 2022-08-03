@@ -46,6 +46,10 @@ public class ProductService {
 	public void delete(Integer product_code) {
         productDao.delete(product_code);		
 	}
+
+	public ProductVo detail(int product_code) {
+		return productDao.detail(product_code);
+	}
 	
 	
 	
