@@ -398,12 +398,14 @@ body {
                         <div>
                             
                             <div class="product-pic" style="margin-top: 50px;">
+                            <a href="<%=request.getContextPath()%>/product/detail/${row.product_code}">
                                 <img class="pic1" src="../resources/images/${row.filename}" style="width: 250px;height: 250px;">
+                                </a>
                             </div>
                             
                             <div style="margin-top: 100px;text-align: center;">
                             <small class="category" style="margin-top: 100px;">${row.product_brand}</small><span><a href="<%=request.getContextPath()%>/product/edit/${row.product_code}"><button type="button">수정</button></a></span>
-                            <h5 class="product-name">${row.product_name}</h5>
+                                 <a href="<%=request.getContextPath()%>/product/detail/${row.product_code}" style="text-decoration: none;color: black;"> <h5 class="product-name">${row.product_name}</h5></a>
                             <div class="row px-3 justify-content-between">
                                 <p class="price">${row.product_price}</p>
                                
