@@ -98,7 +98,7 @@ return;
                                 <li class="breadcrumb-item"><a href="<%=request.getContextPath()%>/product/list.do">상품리스트</a></li>
                                 <li class="breadcrumb-item active">상품 상세화면</li>
                             </ol>
-                        </nav>
+                        </nav>	
                         <div class="product_name">${vo.product_name}</div>
                    
                         <div> <span class="product_price">${vo.product_price}</span> <strike class="product_discount"> </strike>  </div>
