@@ -461,10 +461,12 @@ body {
 
     <SPAN style="margin-top: 50px;text-align: center;font-size: 24px;font-family: 'Nanum Gothic', sans-serif;">브랜드별</SPAN>
    
+    
     <div class="card" style="width: 300px;height:300px;margin-top: 150px;background-color:white;">
+       <a class="nav-link" href="<%=request.getContextPath()%>/product/list.do?brand=rolex">
             <div class="mb-3">
                 <span class="text-grey fs-12" style="color: black;margin-left: 40px;font-size: 16px;">ROLEX</span>
-             
+           
             </div>
           <div class="profile" style="margin-left: 6px;margin: auto;">
                         <img src="https://newsimg.sedaily.com/2022/01/01/260P4GNZZK_2.jpg"
@@ -477,10 +479,12 @@ body {
                  
                 </div>
             </div>
+             </a>
              </div>
-             
+            
              
                <div class="card" style="width: 300px;height:300px;margin-top: 150px;background-color: white;">
+               <a class="nav-link" href="<%=request.getContextPath()%>/product/list.do?brand=Patek Philippe">
             <div class="mb-3">
                 <span class="text-grey fs-12" style="color: black;margin-left: 40px;font-size: 16px;">Patek Philippe </span>
              
@@ -496,9 +500,11 @@ body {
                  
                 </div>
             </div>
+            </a>
              </div>
              
                <div class="card" style="width: 300px;height:300px;margin-top: 150px;background-color: white;">
+                 <a class="nav-link" href="<%=request.getContextPath()%>/product/list.do?brand=TAGHeuer">
             <div class="mb-3">
                 <span class="text-grey fs-12" style="color: black;margin-left: 40px;font-size: 16px;">TAGHeuer</span>
              
@@ -514,9 +520,11 @@ body {
                  
                 </div>
             </div>
+            </a>
              </div>
              
                <div class="card" style="width: 300px;height:300px;margin-top: 150px;background-color: white;">
+                <a class="nav-link" href="<%=request.getContextPath()%>/product/list.do?brand=Breguet">
             <div class="mb-3">
                 <span class="text-grey fs-12" style="color: black;margin-left: 40px;font-size: 16px;">Breguet</span>
              
@@ -532,9 +540,11 @@ body {
                  
                 </div>
             </div>
+            </a>
              </div>
              
                <div class="card" style="width: 300px;height:300px;margin-top: 150px;background-color: white;">
+               <a class="nav-link" href="<%=request.getContextPath()%>/product/list.do?brand=VACHERON CONSTANTIN">
             <div class="mb-3">
                 <span class="text-grey fs-12" style="color: black;margin-left: 40px;font-size: 16px;">VACHERON CONSTANTIN</span>
              
@@ -550,9 +560,11 @@ body {
                  
                 </div>
             </div>
+            </a>
              </div>
     
       <div class="card" style="width: 300px;height:300px;margin-top: 150px;background-color: white;">
+       <a class="nav-link" href="<%=request.getContextPath()%>/product/list.do?brand=BREITLING">
             <div class="mb-3">
                 <span class="text-grey fs-12" style="color: black;margin-left: 40px;font-size: 16px;">BREITLING</span>
              
@@ -568,6 +580,7 @@ body {
                  
                 </div>
             </div>
+            </a>
              </div>
              
              

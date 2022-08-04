@@ -392,7 +392,7 @@ body {
        </form>
           
           
-          <div class="container-fluid px-2 py-2">
+          <div class="container-fluid px-2 py-2" style="margin-top: 30px;">
     <div class="row">
         <div class="col-md-12 col-sm-12" style="margin: auto;">
             <div>
