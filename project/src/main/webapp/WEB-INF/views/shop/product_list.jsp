@@ -293,6 +293,77 @@ body {
 
 </style>
 
+<style type="text/css">
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+
+.note {
+  font-size: 0.375em;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+#search {
+  -webkit-box-align: center;
+          align-items: center;
+  background: #d2d2d2;
+  border-radius: 10px;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
+  margin: 0.5em 0;
+  padding: 0.5em 0.5em 0.5em 1em;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  width: 500px;
+}
+
+#search:hover, #search:focus {
+  background: #8E24AA;
+}
+#search button,
+#search input {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background: transparent;
+  border: 0;
+  color: inherit;
+  font: inherit;
+  outline: 0;
+}
+
+#button i{
+	    font-size: 23px;
+}
+#search button {
+  cursor: pointer;
+  padding: 0 0.25em;
+}
+#search input {
+  -webkit-box-flex: 1;
+          flex: 1;
+		  font-weight: 500;
+		      font-size: 23px;
+}
+#search input::placeholder {
+  color: #fff;
+}
+
+</style>
+
+
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 <script src="http://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -309,15 +380,23 @@ body {
         <div class="profile">
              
 <a href="<%=request.getContextPath()%>/product/write.do"><button type="button">상품등록</button></a>
-      
-       
+
+
+<form action="<%=request.getContextPath()%>/product/list.do" method="post">
+      <div id="search" style="float: right;margin-right: 30px;">
+  <input id="text" name="keyword"/>
+  <button id="button"><i class="fa fa-search"></i></button>
+  
+</div>
+<div class="note">Type & hit enter</div>
+       </form>
           
           
-          <div class="container-fluid px-1 py-5 mx-auto">
+          <div class="container-fluid px-2 py-2">
     <div class="row">
-        <div class="col-md-12 col-sm-12">
+        <div class="col-md-12 col-sm-12" style="margin: auto;">
             <div>
-                <div class="row">
+                <div class="row" style="width: 1900px;">
                      <c:forEach var="row" items="${list}">
                     <div class="col-md-3 col-lg-3">
                         <div>
@@ -363,7 +442,27 @@ body {
                     
                     
                     
-                    
+             <ul class="pagination justify-content-center" id="pageInfo">
+
+				<c:if test="${pageMaker.prev}">
+				<li class="page-item disabled">
+					<a class="page-link" href="<%=request.getContextPath() %>/product/list.do?page=${pageMaker.startPage - 1}&brand=${pageMaker.cri.brand}">Previous</a>
+				</li>
+				</c:if>
+				
+			
+				<c:forEach var="num" begin="${pageMaker.startpage}" end="${pageMaker.endpage}">
+				<li class="page-item">
+					<a class="page-link" href="<%=request.getContextPath() %>/product/list.do?page=${num}&brand=${pageMaker.cri.brand}&keyword=${pageMaker.cri.keyword}">${num}</a>
+				</li>
+				</c:forEach>
+				
+					<c:if test="${pageMaker.next}">
+				<li class="page-item">
+					<a class="page-link" href="<%=request.getContextPath() %>/product/list.do?page=${pageMaker.endPage + 1}&brand=${pageMaker.cri.brand}">Next</a>
+				</li>
+				</c:if>
+					</ul>       
                     
                     
                     

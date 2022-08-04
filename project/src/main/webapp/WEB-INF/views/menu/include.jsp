@@ -99,26 +99,31 @@
         
          <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">About us</a>
+          <a class="nav-link" href="<%=request.getContextPath()%>/product/list.do">전체 상품보기</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="<%=request.getContextPath()%>/product/list.do">Products</a>
+          <a class="nav-link" href="<%=request.getContextPath()%>/product/list.do?brand=rolex">ROLEX</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="#">Services</a>
+          <a class="nav-link" href="<%=request.getContextPath()%>/product/list.do?brand=Patek Philippe">Patek Philppe</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="#">Events</a>
+          <a class="nav-link" href="<%=request.getContextPath()%>/product/list.do?brand=TAGHeuer">TAGHeuer</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="#">contact</a>
+              <a class="nav-link" href="<%=request.getContextPath()%>/product/list.do?brand=Breguet">Breguet</a>
         </li>
 
+           <li class="nav-item">
+              <a class="nav-link" href="<%=request.getContextPath()%>/product/list.do?brand=VACHERON CONSTANTIN">VACHERON CONSTANTIN</a>
+        </li>
         
-        
+         <li class="nav-item">
+              <a class="nav-link" href="<%=request.getContextPath()%>/product/list.do?brand=BREITLING">BREITLING</a>
+        </li>
         
       </ul>
         
@@ -134,34 +139,34 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">About us</a>
+          <a class="nav-link" href="<%=request.getContextPath()%>/product/list.do">전체 상품보기</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="<%=request.getContextPath()%>/product/list.do">Products</a>
+          <a class="nav-link" href="<%=request.getContextPath()%>/product/list.do?brand=rolex">ROLEX</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="#">Services</a>
+          <a class="nav-link" href="<%=request.getContextPath()%>/product/list.do?brand=Patek Philippe">Patek Philppe</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="#">Events</a>
+          <a class="nav-link" href="<%=request.getContextPath()%>/product/list.do?brand=TAGHeuer">TAGHeuer</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="#">contact</a>
+              <a class="nav-link" href="<%=request.getContextPath()%>/product/list.do?brand=Breguet">Breguet</a>
         </li>
 
+           <li class="nav-item">
+              <a class="nav-link" href="<%=request.getContextPath()%>/product/list.do?brand=VACHERON CONSTANTIN">VACHERON CONSTANTIN</a>
+        </li>
         
-        
+         <li class="nav-item">
+              <a class="nav-link" href="<%=request.getContextPath()%>/product/list.do?brand=BREITLING">BREITLING</a>
+        </li>
         
       </ul>
-      <div class="d-flex flex-column sim" style="margin-left: 290px;font-size: 40px;">
-
-        <span><i class="fa-solid fa-crown"></i></span>
-        
-        
-      </div>
+     
 
       <div class="d-flex" style="margin-left: 700px;color: white;">
 

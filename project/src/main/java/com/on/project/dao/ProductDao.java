@@ -6,6 +6,7 @@ import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import com.on.project.vo.Criteria;
 import com.on.project.vo.ProductVo;
 
 
@@ -33,8 +34,8 @@ public class ProductDao {
 
 
 
-	public List<ProductVo> list() {
-		return sqlSession.selectList(MAPPER+".list");
+	public List<ProductVo> list(Criteria cri) throws Exception {
+		return sqlSession.selectList(MAPPER+".list",cri);
 	}
 
 
@@ -70,6 +71,13 @@ public class ProductDao {
 
 	public ProductVo detail(int product_code) {
 		return sqlSession.selectOne(MAPPER+".detail", product_code);
+	}
+
+
+
+
+	public int cnt(Criteria cri) { //상품 개수 확인
+		return sqlSession.selectOne(MAPPER+".cnt", cri);
 	}
 
 	

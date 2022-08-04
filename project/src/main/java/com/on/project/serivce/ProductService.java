@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.on.project.dao.ProductDao;
+import com.on.project.vo.Criteria;
 import com.on.project.vo.ProductVo;
 
 @Service
@@ -26,8 +27,8 @@ public class ProductService {
 		
 	}
 
-	public List<ProductVo> list() {
-		return productDao.list();
+	public List<ProductVo> list(Criteria cri) throws Exception {
+		return productDao.list(cri);
 	}
 	
 	
@@ -51,6 +52,9 @@ public class ProductService {
 		return productDao.detail(product_code);
 	}
 	
+	public int cnt(Criteria cri) {
+		return productDao.cnt(cri);
+	}
 	
 	
 	
