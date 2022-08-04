@@ -646,21 +646,25 @@ body {
 
       <div class="swiper-wrapper">
       
-          <Div class="profile">
+          
         <div class="swiper-slide">
-          <img src="resources/image1/1.webp" />
+      
+          <img src="resources/image2/17.jpg" style="border-radius: 50%;width: 300px;height: 300px;"  />
         </div>
-        </div>
+    
         <div class="swiper-slide">
-          <img src="resources/image1/2.jpg" />
-        </div>
-        <div class="swiper-slide">
-          <img src="resources/image1/3.webp" />
+          <img src="resources/image2/13.png" style="border-radius: 50%;width: 300px;height: 300px;'" />
         </div>
         <div class="swiper-slide">
-          <img src="resources/image1/4.jpg" />
+          <img src="resources/image2/14.jpg"  style="border-radius: 50%;width: 300px;height: 300px;"/>
         </div>
-       
+        <div class="swiper-slide">
+          <img src="resources/image2/15.jpg" style="border-radius: 50%;width: 300px;height: 300px;" />
+        </div>
+          <div class="swiper-slide">
+          <img src="resources/image2/16.jpg" style="border-radius: 50%;width: 300px;height: 300px;" />
+        </div>
+         
        
       
        

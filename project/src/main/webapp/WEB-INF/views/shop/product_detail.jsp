@@ -83,7 +83,7 @@ return;
             </div>
         </div>
     </header>
-    <div class="single_product">
+    <div class="single_product" style="margin-top: 50px;">
         <div class="container" style="float: none; margin:100 auto;background-color: #white; padding: 11px;">
             <div class="row">
                 
@@ -169,7 +169,7 @@ return;
                                 
                      </form>           
                             </div>
-                            <div class="col-xs-6"> <button type="button" class="btn btn-primary shop-button" onclick="check()">Add to Cart</button> 
+                            <div class="col-xs-6" style="margin-top: 30px;"> <button type="button" class="btn btn-dark shop-button" onclick="check()">Add to Cart</button> 
                                 <div class="product_fav"><i class="fas fa-heart"></i></div>
                             </div>
                         </div>
@@ -180,11 +180,25 @@ return;
                                
                             
                         </tbody>
-                   
+                   <hr>
                 </div>
             </div>
         </div>
-   
+
+<hr> 
+    
+ <div class="row" style="justify-content: center;margin-left: 450px;">
+              <div class="col-12">
+        
+              <img src="http://img1.tmon.kr/cdn3/deals/2019/06/13/2167568658/review_15604109087_ed09c.jpg" class="img-fluid" style="width: 1000px;">
+                  <br><br><br><br>
+                  <img src="http://loveclock.co.kr/web/watch/CARD/band-service.jpg" class="img-fluid" style="width: 1000px;">
+                  <br><br><br><br>
+                  <img src="https://cdn.imweb.me/upload/S201912072d9f3bab5337e/8faafefd2429a.jpg" class="img-fluid"style="width: 1000px;">
+                   <br><br><br><br>
+                  <img src="http://m.thefindme.co.kr/web/upload/NNEditor/20190823/EAB590ED999820EBB08F20EBB098ED928820EC9588EB82B4.jpg" class="img-fluid" style="width: 1000px;">
+              </div>
+          </div>
 
 
 </body>

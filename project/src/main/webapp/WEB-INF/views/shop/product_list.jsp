@@ -301,82 +301,7 @@ body {
 </head>
 <body>
 
- <nav class="navbar navbar-expand-lg navbar-red navbar-dark">
-        <div class="wrapper">
-          
-        </div>
-  <div class="container-fluid all-show">
-    <a class="navbar-brand" href="#" style="color: black">다있쏘 <i class="fa fa-codepen"></i></a>
-    
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon">
-
-        
-      </span>
-
-
-      
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">About us</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Products</a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="#">Services</a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="#">Events</a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="#">contact</a>
-        </li>
-
-        
-        
-        
-      </ul>
-      <div class="d-flex flex-column sim" style="margin-left: 290px;font-size: 40px;">
-
-        <span><i class="fa-solid fa-crown"></i></span>
-        
-        
-      </div>
-
-      <div class="d-flex" style="margin-left: 560px;color: white;">
-
-        <div style="margin-right: 40px;">
-        
-        <c:if test="${sessionScope.member_id ==null }">
-        
-           <strong> <a href="/project/member/login.do" style="color: white;">로그인</a></strong>
-       
-           <strong><a href="/project/member/join.do" style="color: white;">회원가입</a></strong>
-        </c:if>   
-           
-             <c:if test="${sessionScope.member_id !=null }">
-        
-           ${sessionScope.name}(${sessionScope.member_id}) 님 어서오세요
-       
-           <strong><a href="/project/member/logout.do" style="color: white;">로그아웃</a></strong>
-        </c:if>   
-
-          <a style="font-size: 28px;margin-left: 60px;"> <i class="fa-solid fa-bag-shopping"></i></a>
-        </div>
-
-      </div>
-
-    </div>
-  </div>
-</nav>
-
-
+<%@ include file="../menu/include.jsp" %>
   
    
    
@@ -398,12 +323,14 @@ body {
                         <div>
                             
                             <div class="product-pic" style="margin-top: 50px;">
+                            <a href="<%=request.getContextPath()%>/product/detail/${row.product_code}">
                                 <img class="pic1" src="../resources/images/${row.filename}" style="width: 250px;height: 250px;">
+                                </a>
                             </div>
                             
                             <div style="margin-top: 100px;text-align: center;">
                             <small class="category" style="margin-top: 100px;">${row.product_brand}</small><span><a href="<%=request.getContextPath()%>/product/edit/${row.product_code}"><button type="button">수정</button></a></span>
-                            <h5 class="product-name">${row.product_name}</h5>
+                                 <a href="<%=request.getContextPath()%>/product/detail/${row.product_code}" style="text-decoration: none;color: black;"> <h5 class="product-name">${row.product_name}</h5></a>
                             <div class="row px-3 justify-content-between">
                                 <p class="price">${row.product_price}</p>
                                
