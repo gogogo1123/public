@@ -56,7 +56,8 @@ return;
 <body>
 <form name="form">
 <%@ include file="../menu/include.jsp" %>
-
+<input type="hidden" name="product_code" value="${vo.product_code}">
+<input type="hidden" name="product_price" value="${vo.product_price}">
 <div class="super_container">
     <header class="header" style="display: none;">
         <div class="header_main">
