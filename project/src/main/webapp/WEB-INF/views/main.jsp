@@ -318,73 +318,7 @@ body {
 
 
 
-<!-- nav -->
-
-
-  <nav class="navbar navbar-expand-lg navbar-red navbar-dark">
-        <div class="wrapper">
-          
-        </div>
-  <div class="container-fluid all-show">
-    <a class="navbar-brand" href="<%=request.getContextPath()%>/main.do" style="color: black">다있쏘 <i class="fa fa-codepen"></i></a>
-    
- 
-        
-        
-        
-        
-      </span>
-
-
-      
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link" href="<%=request.getContextPath()%>/product/list.do">전체 상품보기</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="<%=request.getContextPath()%>/product/list.do?brand=rolex">ROLEX</a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="<%=request.getContextPath()%>/product/list.do?brand=Patek Philippe">Patek Philppe</a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="<%=request.getContextPath()%>/product/list.do?brand=TAGHeuer">TAGHeuer</a>
-        </li>
-
-        <li class="nav-item">
-              <a class="nav-link" href="<%=request.getContextPath()%>/product/list.do?brand=Breguet">Breguet</a>
-        </li>
-
-           <li class="nav-item">
-              <a class="nav-link" href="<%=request.getContextPath()%>/product/list.do?brand=VACHERON CONSTANTIN">VACHERON CONSTANTIN</a>
-        </li>
-        
-         <li class="nav-item">
-              <a class="nav-link" href="<%=request.getContextPath()%>/product/list.do?brand=BREITLING">BREITLING</a>
-        </li>
-        
-      </ul>
-      
-
-      <div class="d-flex" style="margin-left: 700px;color: white;">
-
-        <div style="margin-right: 40px;">
-           <strong> <a href="/project/member/login.do" style="color: white;">로그인</a></strong>
-       
-           <strong>    <a href="#" style="color: white;">회원가입</a></strong>
-
-          <a style="font-size: 28px;margin-left: 60px;"> <i class="fa-solid fa-bag-shopping"></i></a>
-        </div>
-
-      </div>
-
-    </div>
-  </div>
-</nav>
+<%@ include file="menu/include.jsp" %>
 
  
 <!-- <div class="peo" style="background: url('resources/image/cc.jpg') no-repeat ;width: 1800px;height: 500px;margin: auto;margin-top: 30px;">

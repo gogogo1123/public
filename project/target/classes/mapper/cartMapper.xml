@@ -5,7 +5,24 @@
 <mapper namespace = "cart">
 
 	
+	<insert id="insert">
+	
+	insert into carttable(member_id,product_code,amount) values (#{member_id},#{product_code},#{amount})
+	
+	</insert>
 
+   <select id="list" resultType="com.on.project.vo.TotalVo" parameterType="String">
+   
+   select *,product_price*amount money from membertable m,carttable c,producttable p where m.member_id=c.member_id and c.product_code = p.product_code and c.member_id = #{userid};
+   
+   </select>
+	
+	
+	<select id="sumMoney" resultType="int">
+	
+	select coalesce(sum(product_price*amount),0) from carttable c ,producttable p where c.product_code=p.product_code and member_id=#{userid}
+	
+	</select>
 	
 	
 </mapper>

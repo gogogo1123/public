@@ -40,7 +40,7 @@ if (amount==0){
 
 	
 	//가상경로 사용
-	fm.action = "<%=request.getContextPath() %>/shop/cart/insert.do";
+	fm.action = "<%=request.getContextPath() %>/cart/insert.do";
 	fm.method = "post";
 	fm.submit();  
 
@@ -57,7 +57,6 @@ return;
 <form name="form">
 <%@ include file="../menu/include.jsp" %>
 <input type="hidden" name="product_code" value="${vo.product_code}">
-<input type="hidden" name="product_price" value="${vo.product_price}">
 <div class="super_container">
     <header class="header" style="display: none;">
         <div class="header_main">

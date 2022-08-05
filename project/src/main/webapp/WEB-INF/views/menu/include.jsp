@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+            <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+     <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -135,16 +137,35 @@
       </ul>
      
 
-      <div class="d-flex" style="margin-left: 700px;color: white;">
+      <div class="d-flex" style="margin-left: 600px;color: white;">
 
         <div style="margin-right: 40px;">
-           <strong> <a href="/project/member/login.do" style="color: white;">로그인</a></strong>
+     
+        <c:if test="${sessionScope.member_id ==null }">
+        
+           <strong> <a href="<%=request.getContextPath()%>/member/login.do" style="color: white;">로그인</a></strong>
        
-           <strong>    <a href="#" style="color: white;">회원가입</a></strong>
+           <strong>    <a href="<%=request.getContextPath()%>/member/join.do" style="color: white;">회원가입</a></strong>
 
           <a style="font-size: 28px;margin-left: 60px;"> <i class="fa-solid fa-bag-shopping"></i></a>
-        </div>
+          
+          </c:if>
+          
+            <c:if test="${sessionScope.member_id !=null }">
+            
+            <strong style="margin-right: 10px;"> ${sessionScope.name} 님 어서오세요 </strong><br>
+        
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+           <strong> <a href="/project/member/logout.do" style="color: white;">로그아웃</a></strong>
+           <a style="font-size: 28px;margin-left: 60px;"> <i class="fa-solid fa-bag-shopping"></i></a>
 
+    
+          
+          </c:if>
+       
+       
+        </div>
+    
       </div>
 
     </div>
