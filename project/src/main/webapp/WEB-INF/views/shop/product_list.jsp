@@ -379,7 +379,7 @@ body {
     
         <div class="profile">
              
-<a href="<%=request.getContextPath()%>/product/write.do"><button type="button">상품등록</button></a>
+<a href="<%=request.getContextPath()%>/product/write.do" style="margin-left: 200px;margin-top: 150px;"><button type="button" class="btn btn-sm bg-dark text-white">상품등록</button></a>
 
 
 <form action="<%=request.getContextPath()%>/product/list.do" method="post">
@@ -408,7 +408,7 @@ body {
                             </div>
                             
                             <div style="margin-top: 100px;text-align: center;">
-                            <small class="category" style="margin-top: 100px;">${row.product_brand}</small><span><a href="<%=request.getContextPath()%>/product/edit/${row.product_code}"><button type="button">수정</button></a></span>
+                            <small class="category" style="margin-top: 100px;">${row.product_brand}</small><span><a href="<%=request.getContextPath()%>/product/edit/${row.product_code}"><button type="button" class="btn btn-sm bg-dark text-white">수정</button></a></span>
                                  <a href="<%=request.getContextPath()%>/product/detail/${row.product_code}" style="text-decoration: none;color: black;"> <h5 class="product-name">${row.product_name}</h5></a>
                             <div class="row px-3 justify-content-between">
                                 <p class="price">${row.product_price}</p>
