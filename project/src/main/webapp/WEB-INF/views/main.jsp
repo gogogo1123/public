@@ -321,70 +321,61 @@ body {
 <!-- nav -->
 
 
- <nav class="navbar navbar-expand-lg navbar-red navbar-dark">
+  <nav class="navbar navbar-expand-lg navbar-red navbar-dark">
         <div class="wrapper">
           
         </div>
   <div class="container-fluid all-show">
-    <a class="navbar-brand" href="#" style="color: black">다있쏘 <i class="fa fa-codepen"></i></a>
+    <a class="navbar-brand" href="<%=request.getContextPath()%>/main.do" style="color: black">다있쏘 <i class="fa fa-codepen"></i></a>
     
-    
-      
-
+ 
         
-      
+        
+        
+        
+      </span>
 
 
       
-
+    </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
+      <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">About us</a>
+          <a class="nav-link" href="<%=request.getContextPath()%>/product/list.do">전체 상품보기</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="<%=request.getContextPath()%>/product/list.do">Products</a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="#">Services</a>
+          <a class="nav-link" href="<%=request.getContextPath()%>/product/list.do?brand=rolex">ROLEX</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="#">Events</a>
+          <a class="nav-link" href="<%=request.getContextPath()%>/product/list.do?brand=Patek Philippe">Patek Philppe</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="#">contact</a>
+          <a class="nav-link" href="<%=request.getContextPath()%>/product/list.do?brand=TAGHeuer">TAGHeuer</a>
         </li>
 
+        <li class="nav-item">
+              <a class="nav-link" href="<%=request.getContextPath()%>/product/list.do?brand=Breguet">Breguet</a>
+        </li>
+
+           <li class="nav-item">
+              <a class="nav-link" href="<%=request.getContextPath()%>/product/list.do?brand=VACHERON CONSTANTIN">VACHERON CONSTANTIN</a>
+        </li>
         
-        
+         <li class="nav-item">
+              <a class="nav-link" href="<%=request.getContextPath()%>/product/list.do?brand=BREITLING">BREITLING</a>
+        </li>
         
       </ul>
+      
 
-
-
-      <div class="d-flex" style="margin-left: 800px;color: white;">
-
-     <div class="d-flex">
-
+      <div class="d-flex" style="margin-left: 700px;color: white;">
 
         <div style="margin-right: 40px;">
-        
-        <c:if test="${sessionScope.member_id ==null }">
-        
-           <strong> <a href="<%=request.getContextPath() %>/member/login.do" style="color: white;margin-left: 200px;">로그인</a></strong>
+           <strong> <a href="/project/member/login.do" style="color: white;">로그인</a></strong>
        
-           <strong><a href="<%=request.getContextPath() %>/member/join.do" style="color: white;">회원가입</a></strong>
-        </c:if>   
-           
-             <c:if test="${sessionScope.member_id !=null }">
-        
-           ${sessionScope.name}님 어서오세요
-       
-           <strong><a href="<%=request.getContextPath() %>/member/logout.do" style="color: white;">로그아웃</a></strong>
-        </c:if>   
+           <strong>    <a href="#" style="color: white;">회원가입</a></strong>
 
           <a style="font-size: 28px;margin-left: 60px;"> <i class="fa-solid fa-bag-shopping"></i></a>
         </div>
@@ -437,10 +428,12 @@ body {
 
     <SPAN style="margin-top: 50px;text-align: center;font-size: 24px;font-family: 'Nanum Gothic', sans-serif;">브랜드별</SPAN>
    
+    
     <div class="card" style="width: 300px;height:300px;margin-top: 150px;background-color:white;">
+       <a class="nav-link" href="<%=request.getContextPath()%>/product/list.do?brand=rolex">
             <div class="mb-3">
                 <span class="text-grey fs-12" style="color: black;margin-left: 40px;font-size: 16px;">ROLEX</span>
-             
+           
             </div>
           <div class="profile" style="margin-left: 6px;margin: auto;">
                         <img src="https://newsimg.sedaily.com/2022/01/01/260P4GNZZK_2.jpg"
@@ -453,10 +446,12 @@ body {
                  
                 </div>
             </div>
+             </a>
              </div>
-             
+            
              
                <div class="card" style="width: 300px;height:300px;margin-top: 150px;background-color: white;">
+               <a class="nav-link" href="<%=request.getContextPath()%>/product/list.do?brand=Patek Philippe">
             <div class="mb-3">
                 <span class="text-grey fs-12" style="color: black;margin-left: 40px;font-size: 16px;">Patek Philippe </span>
              
@@ -472,9 +467,11 @@ body {
                  
                 </div>
             </div>
+            </a>
              </div>
              
                <div class="card" style="width: 300px;height:300px;margin-top: 150px;background-color: white;">
+                 <a class="nav-link" href="<%=request.getContextPath()%>/product/list.do?brand=TAGHeuer">
             <div class="mb-3">
                 <span class="text-grey fs-12" style="color: black;margin-left: 40px;font-size: 16px;">TAGHeuer</span>
              
@@ -490,9 +487,11 @@ body {
                  
                 </div>
             </div>
+            </a>
              </div>
              
                <div class="card" style="width: 300px;height:300px;margin-top: 150px;background-color: white;">
+                <a class="nav-link" href="<%=request.getContextPath()%>/product/list.do?brand=Breguet">
             <div class="mb-3">
                 <span class="text-grey fs-12" style="color: black;margin-left: 40px;font-size: 16px;">Breguet</span>
              
@@ -508,9 +507,11 @@ body {
                  
                 </div>
             </div>
+            </a>
              </div>
              
                <div class="card" style="width: 300px;height:300px;margin-top: 150px;background-color: white;">
+               <a class="nav-link" href="<%=request.getContextPath()%>/product/list.do?brand=VACHERON CONSTANTIN">
             <div class="mb-3">
                 <span class="text-grey fs-12" style="color: black;margin-left: 40px;font-size: 16px;">VACHERON CONSTANTIN</span>
              
@@ -526,9 +527,11 @@ body {
                  
                 </div>
             </div>
+            </a>
              </div>
     
       <div class="card" style="width: 300px;height:300px;margin-top: 150px;background-color: white;">
+       <a class="nav-link" href="<%=request.getContextPath()%>/product/list.do?brand=BREITLING">
             <div class="mb-3">
                 <span class="text-grey fs-12" style="color: black;margin-left: 40px;font-size: 16px;">BREITLING</span>
              
@@ -544,6 +547,7 @@ body {
                  
                 </div>
             </div>
+            </a>
              </div>
              
              

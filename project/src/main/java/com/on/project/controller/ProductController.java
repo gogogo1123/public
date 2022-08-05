@@ -1,5 +1,6 @@
 package com.on.project.controller;
 
+import java.awt.print.Pageable;
 import java.io.File;
 import java.util.List;
 
@@ -13,6 +14,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.on.project.serivce.ProductService;
+import com.on.project.vo.Criteria;
+import com.on.project.vo.PageMaker;
 import com.on.project.vo.ProductVo;
 
 @Controller //임포트
@@ -69,11 +72,25 @@ public class ProductController {
 	
 	
 	@RequestMapping("list.do")
-	public ModelAndView list(ModelAndView mav) {
+	public ModelAndView list(ModelAndView mav,Criteria cri) throws Exception {
+		
+		System.out.println("keyword =" + cri.getKeyword());
+		
+		int productCnt = productService.cnt(cri); // 상품 개수를 구하기
+		
+		System.out.println("상품개수 =" + productCnt);
 		
 		
-		List<ProductVo> list = productService.list(); // 상품 리스트 뽑아오기
+		PageMaker pageMaker = new PageMaker();
+		pageMaker.setCri(cri); // 검색내용을 넣어줌
+		pageMaker.setTotalcount(productCnt); //상품 전체개수를 넣어줌
+		
+		
+		
+		
+		List<ProductVo> list = productService.list(cri); // 상품 리스트 뽑아오기
 		mav.addObject("list", list); // 리스트 뽑은거 넣어놓깅
+		mav.addObject("pageMaker", pageMaker);
 		mav.setViewName("shop/product_list"); //뷰페이지롱 이동
 		return mav;
 		
