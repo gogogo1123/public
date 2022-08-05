@@ -64,9 +64,10 @@
                 });
                 //성공시 이동할 페이지
                <%--  location.href='<%=request.getContextPath()%>/order/paySuccess?msg='+msg; --%>
+               alert('결제가 완료되었습니다');
                location.href='<%=request.getContextPath()%>/product/list.do'
             } else {
-                msg = '결제에 실패하였습니다.';
+                msg = '테스트 페이지라서 취소해 데이터에는 넣기로 되어있습니다 !.';
                 msg += '에러내용 : ' + rsp.error_msg;
                 //실패시 이동할 페이지
                   location.href='<%=request.getContextPath()%>/cart/list.do'
