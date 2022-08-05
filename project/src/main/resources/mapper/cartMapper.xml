@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace = "cart">
+
+	
+	<insert id="insert">
+	
+	insert into carttable(member_id,product_code,amount) values (#{member_id},#{product_code},#{amount})
+	
+	</insert>
+
+   <select id="list" resultType="com.on.project.vo.TotalVo" parameterType="String">
+   
+   select *,product_price*amount money from membertable m,carttable c,producttable p where m.member_id=c.member_id and c.product_code = p.product_code and c.member_id = #{userid};
+   
+   </select>
+	
+	
+	<select id="sumMoney" resultType="int">
+	
+	select coalesce(sum(product_price*amount),0) from carttable c ,producttable p where c.product_code=p.product_code and member_id=#{userid}
+	
+	</select>
+	
+	
+</mapper>
