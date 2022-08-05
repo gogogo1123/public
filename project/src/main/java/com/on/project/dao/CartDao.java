@@ -35,6 +35,18 @@ public class CartDao {
 	public int sumMoney(String userid) {
 		return sqlSession.selectOne(MAPPER+".sumMoney", userid);
 	}
+
+	public void delete(int cart_id) {
+            sqlSession.delete(MAPPER+".delete", cart_id);		
+	}
+
+	public void deleteAll(String userid) {
+		 sqlSession.delete(MAPPER+".deleteAll", userid);
+	}
+
+	public void update(CartVo vo) {
+         sqlSession.update(MAPPER+".update", vo);		
+	}
 	
 	
 	

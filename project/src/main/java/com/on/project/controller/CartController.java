@@ -71,12 +71,68 @@ public class CartController {
 		}
 		
 		
+
+		}
 		
+	@RequestMapping("delete.do") // get방식으로 리스트에서 cart_id 값을 받아서 넣어줌.
+	public String delete(int cart_id) {
+		cartService.delete(cart_id);
+		return "redirect:/cart/list.do";
+
 		
+	}
+	
+	
+	@RequestMapping("deleteAll.do")
+		public String deleteAll(HttpSession session) {
+			String userid = (String) session.getAttribute("member_id");
+			
+			if(userid !=null) {
+				cartService.deleteAll(userid);
+			}else {
+				 return "redirect:/member/login.do";
+			}
+			
+		
+		return "redirect:/cart/list.do";
+	}
+	
+	
+	@RequestMapping("update.do")
+	public String update(int[] amount,int[] cart_id,HttpSession session) {
+		
+		String userid = (String) session.getAttribute("member_id");
+		
+		if(userid==null) {
+			return "redirect:/member/login.do";
+		}
+		
+		for(int i=0; i<cart_id.length; i++) { //카트 번호 에 도달햇을때까지 반복
+			
+		   //그중에서 만약에 카트번호에 맞는 amount 수량값이 0일때 삭제
+			if(amount[i]==0) {
+				cartService.delete(cart_id[i]);
+			}else {
+				
+				CartVo vo = new CartVo();
+				vo.setMember_id(userid);
+				vo.setCart_id(cart_id[i]);
+				vo.setAmount(amount[i]);
+				cartService.update(vo);
+			}
+			
+		}
+		
+		return "redirect:/cart/list.do";
 	}
 	
 	
 	
 	
 	
-}
+	
+	
+	
+	}
+		
+

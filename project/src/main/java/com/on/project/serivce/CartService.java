@@ -33,6 +33,18 @@ public class CartService {
 	public int sumMoney(String userid) {
 		return cartDao.sumMoney(userid);
 	}
+
+	public void delete(int cart_id) {
+        cartDao.delete(cart_id);		
+	}
+
+	public void deleteAll(String userid) {
+        cartDao.deleteAll(userid);		
+	}
+
+	public void update(CartVo vo) {
+		cartDao.update(vo);
+	}
 	
 	
 

@@ -21,6 +21,26 @@
 <script src="https://kit.fontawesome.com/6c060c00b1.js" crossorigin="anonymous"></script>
 
 
+
+<script>
+
+$(function(){
+	
+
+	
+	$("#btnDelete").click(function(){
+		
+		if(confirm("장바구니를 비우시겠습니까?")){
+			location.href="<%=request.getContextPath()%>/cart/deleteAll.do";
+		}
+	})
+	
+	
+})
+
+</script>
+
+
 </head>
 <body>
 
@@ -28,13 +48,17 @@
 <%@ include file="../menu/include.jsp" %>
 
 
-
+<form action="<%=request.getContextPath()%>/cart/update.do" method="post">
 <div class="cart_section">
      <div class="container-fluid">
          <div class="row">
              <div class="col-lg-10 offset-lg-1">
                  <div class="cart_container">
-                     <div class="cart_title">Shopping Cart<small> (1 item in your cart) </small></div>
+                     <div class="cart_title">장바구니함
+                     <div style="float: right;"><button type="button" id="btnDelete" class="btn btn-sm bg-dark text-dark " style="margin-right: 28px;">
+                     <a style="color: white;">전체삭제</a></div
+                     ></div>
+               
                      <div class="cart_items">
                      
                             <c:forEach var="row" items="${map.list}">
@@ -42,7 +66,7 @@
                          <ul class="cart_list">
                              <li class="cart_item clearfix">
 
-                                 <div class="cart_item_image"><img src="https://i.imgur.com/qqBRWD5.jpg" alt=""></div>
+                                 <div class="cart_item_image"><img src="<%=request.getContextPath()%>/resources/images/${row.filename}" style="width: 133px;height: 133px;"></div>
                                  <div class="cart_item_info d-flex flex-md-row flex-column justify-content-between">
                                      <div class="cart_item_name cart_info_col">
                                          <div class="cart_item_title">Name</div>
@@ -50,11 +74,13 @@
                                      </div>
                                      <div class="cart_item_color cart_info_col">
                                          <div class="cart_item_title">Brand</div>
-                                         <div class="cart_item_text"><span style="background-color:#999999;"></span>${row.product_brand}</div>
+                                         <div class="cart_item_text"></span>${row.product_brand}</div>
                                      </div>
                                      <div class="cart_item_quantity cart_info_col">
                                          <div class="cart_item_title">amount</div>
-                                         <div class="cart_item_text">${row.amount}</div>
+                                        <input type="number"" name="amount" value="${row.amount}" style="width: 50px;border: none;margin-top: 35px;" >
+                                        <input type="hidden" name="cart_id" value="${row.cart_id}">
+                                        <button class="btn btn-sm bg-dark text-dark" ><a style="color: white;">변경</a></button>
                                      </div>
                                      <div class="cart_item_price cart_info_col">
                                          <div class="cart_item_title">Price</div>
@@ -64,21 +90,31 @@
                                          <div class="cart_item_title">Total</div>
                                          <div class="cart_item_text">${row.money}</div>
                                      </div>
+                                      <div class="cart_item_total cart_info_col">
+                                         <div class="cart_item_title">삭제</div>
+                                         <div class="cart_item_text">
+<a style="color: white;text-decoration: none;" href="<%=request.getContextPath()%>/cart/delete.do?cart_id=${row.cart_id}">
+<button type="button" class="btn btn-sm bg-dark text-dark" style="color: white;">삭제</a>
+</button>
+</div>
+                                     </div>
                                  </div>
                              </li>
                          </ul>
                          
                                 </c:forEach>
                      </div>
-             
+    </form>        
                     
                      <div class="order_total">
-                         <div class="order_total_content text-md-right">
-                             <div class="order_total_title">Order Total:</div>
-                             <div class="order_total_amount">${map.sumMoney}</div>
+                         <div class="order_total_content text-md-right" style="float: right;">
+                             <div class="order_total_title">총 금액:</div>
+                             <div class="order_total_amount">${map.sumMoney}&nbsp;원</div>
                          </div>
                      </div>
-                     <div class="cart_buttons"> <button type="button" class="button cart_button_clear">Continue Shopping</button> <button type="button" class="button cart_button_checkout">Add to Cart</button> </div>
+                     <div class="cart_buttons"> 
+                     <button style="width: 162px;height: 48px;"  type="button" class="btn btn-sm bg-light text-dark" onclick="location.href='<%=request.getContextPath()%>/product/list.do'">상품리스트</button>
+                      <a style="color: white;"><button type="button" class="btn btn-sm bg-dark text-dark" style="width: 162px;height: 48px;">결제하기</a></button> </div>
                  </div>
              </div>
          </div>

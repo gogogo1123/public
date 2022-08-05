@@ -147,7 +147,7 @@
        
            <strong>    <a href="<%=request.getContextPath()%>/member/join.do" style="color: white;">회원가입</a></strong>
 
-          <a style="font-size: 28px;margin-left: 60px;"> <i class="fa-solid fa-bag-shopping"></i></a>
+          <a style="font-size: 28px;margin-left: 60px;" href="<%=request.getContextPath()%>/cart/list.do"> <i class="fa-solid fa-bag-shopping"></i></a>
           
           </c:if>
           
@@ -157,7 +157,7 @@
         
          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
            <strong> <a href="/project/member/logout.do" style="color: white;">로그아웃</a></strong>
-           <a style="font-size: 28px;margin-left: 60px;"> <i class="fa-solid fa-bag-shopping"></i></a>
+           <a style="font-size: 28px;margin-left: 60px;" href="<%=request.getContextPath()%>/cart/list.do"> <i class="fa-solid fa-bag-shopping"></i></a>
 
     
           
