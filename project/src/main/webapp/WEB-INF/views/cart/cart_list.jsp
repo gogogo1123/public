@@ -19,7 +19,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 <script src="http://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://kit.fontawesome.com/6c060c00b1.js" crossorigin="anonymous"></script>
-
+<link rel="stylesheet" href="<%=request.getContextPath()%>/resources/image/style.css">
 
 
 <script>
@@ -51,6 +51,19 @@ $(function(){
 <form action="<%=request.getContextPath()%>/cart/update.do" method="post">
 <div class="cart_section">
      <div class="container-fluid">
+     <header>
+    <div class="d-flex justify-content-center align-items-center pb-3">
+        <div class="px-sm-5 px-2 active">SHOPPING CART
+            <span class="fas fa-check"></span>
+        </div>
+        <div class="px-sm-5 px-2">CHECKOUT</div>
+        <div class="px-sm-5 px-2">FINISH</div>
+    </div>
+    <div class="progress">
+        <div class="progress-bar bg-success" role="progressbar" aria-valuenow="25" aria-valuemin="0"
+            aria-valuemax="100"></div>
+    </div>
+</header>
          <div class="row">
              <div class="col-lg-10 offset-lg-1">
                  <div class="cart_container">
@@ -114,7 +127,7 @@ $(function(){
                      </div>
                      <div class="cart_buttons"> 
                      <button style="width: 162px;height: 48px;"  type="button" class="btn btn-sm bg-light text-dark" onclick="location.href='<%=request.getContextPath()%>/product/list.do'">상품리스트</button>
-                      <a style="color: white;"><button type="button" class="btn btn-sm bg-dark text-dark" style="width: 162px;height: 48px;">결제하기</a></button> </div>
+                      <a style="color: white;"><button type="button" class="btn btn-sm bg-dark text-dark" style="width: 162px;height: 48px;" onclick="location.href='<%=request.getContextPath()%>/order/insert.do'">결제하기</a></button> </div>
                  </div>
              </div>
          </div>

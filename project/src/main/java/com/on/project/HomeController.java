@@ -51,4 +51,9 @@ public class HomeController {
 	public String deta() {
 		return "shop/product_detail";
 	}
+	
+	@RequestMapping("order.do")
+	public String order() {
+		return "cart/cart_order";
+	}
 }
