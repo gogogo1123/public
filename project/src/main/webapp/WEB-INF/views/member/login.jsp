@@ -48,7 +48,7 @@ function check(){
 		
 	}
 	
-	frm.action = "/project/member/loginprocess.do";
+	frm.action = "<%=request.getContextPath()%>/member/loginprocess.do";
 	frm.method="post";
 	frm.submit();
 	return;

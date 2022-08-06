@@ -26,5 +26,10 @@ public class MemberService {
 	public String loginprocess(MemberVo vo) {
 		return memberDao.loginprocess(vo);
 	}
+
+
+	public int checkid(String member_id) {
+		return memberDao.checkid(member_id);
+	}
 	
 }

@@ -5,6 +5,8 @@ import javax.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.on.project.serivce.MemberService;
 import com.on.project.vo.MemberVo;
@@ -78,13 +80,29 @@ public class MemberController {
 		
 		if(result ==1) { //1이되면 메인으로 이동하고
 			return "redirect:/main.do";
-		}else { // 실패하면 회원가입페이지로 이동.
-			return "member/join";
+		}else if(result==0) { // 실패하면 회원가입페이지로 이동.
+			return "refirect:/member/login";
 		}
+		return null;
 		
 	
 	}
 	
+	@RequestMapping("checkId.do")
+	@ResponseBody
+	public String checkId(@RequestParam("member_id") String member_id){
+		String result = "N"; //성공
+		
+		int flag = memberService.checkid(member_id);
+		
+		if(flag==1) {
+			result="Y";
+		}else {
+			result="N";
+		}
+		
+		return result;
+	}
 	
 	
 	

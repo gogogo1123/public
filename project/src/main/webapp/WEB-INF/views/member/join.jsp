@@ -35,13 +35,51 @@ section .container .user .formbox .form input[type='button']{max-width:80px;back
 <script>
 
 
+$(function(){
+
+	$("#checkId").click(function(){
+		
+		let member_id = $("#member_id").val();
+	 
+ 		
+		$.ajax({
+			type:'post',
+			url:"<%=request.getContextPath()%>/member/checkId.do",
+			data: {"member_id":member_id},
+			success: function(data){
+				if(data == "N"){
+					alert('사용가능한 아이디입니다.');
+				    code = data;
+				 
+			 }else{
+					alert('사용불가능한 아이디입니다.');	
+					code = data;
+			 }
+				 
+		 },
+			error : function(error){
+				alert(error);
+				}
+		});
+		
+	});
+	
+
+});
+
+
+
+
+
+
+
 function check(){
 	
 	
 	var frm = document.joinform;
 	
 	
-	if(frm.member_id.value==""){
+	if(frm.member_id.value=="code"){
 	  alert("아이디를 입력해주세요");
 	  frm.member_id.focus();
 	  return;
@@ -69,7 +107,7 @@ function check(){
 	
 	
 	
-	frm.action = "/project/member/joinprocess.do";
+	frm.action = "<%=request.getContextPath()%>/member/joinprocess.do";
 	frm.method="post";
 	frm.submit();
 	
@@ -137,7 +175,11 @@ function check(){
 
 
 
+<script>
 
+
+
+</script>
 
 
 
@@ -171,7 +213,9 @@ function check(){
      <div class="form">
    
       <h2>회원가입</h2>
-       <input type="text" placeholder="아이디를 입력하세요" name="member_id">
+       <input type="text" placeholder="아이디를 입력하세요" name="member_id" id="member_id">
+        <input type="button" onclick="" value="중복확인" 
+           style="background-color: black" id="checkId">
         <input type="password" placeholder="비밀번호를 입력하세요" name="member_pw">
          <input type="text" placeholder="이름을 입력하세요" name="member_name">
          <Div style="display: flex;">

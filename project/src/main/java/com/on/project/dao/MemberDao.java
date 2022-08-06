@@ -30,6 +30,12 @@ public class MemberDao {
 	public String loginprocess(MemberVo vo) {
 		return sqlSession.selectOne(MAPPER+".loginprocess", vo);
 	}
+
+
+
+	public int checkid(String member_id) {
+		return sqlSession.selectOne(MAPPER+".check", member_id);
+	}
 	
 	
 }
