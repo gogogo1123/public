@@ -153,11 +153,11 @@
           
             <c:if test="${sessionScope.member_id !=null }">
             
-            <strong style="margin-right: 10px;"> ${sessionScope.name} 님 어서오세요 </strong><br>
+            <strong style="margin-left: 40px;"> ${sessionScope.name} 님 어서오세요 </strong><br>
         
          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
            <strong> <a href="/project/member/logout.do" style="color: white;">로그아웃</a></strong>
-           <a style="font-size: 28px;margin-left: 60px;" href="<%=request.getContextPath()%>/cart/list.do"> <i class="fa-solid fa-bag-shopping"></i></a>
+           <a style="font-size: 28px;margin-left: 20px;" href="<%=request.getContextPath()%>/cart/list.do"> <i class="fa-solid fa-bag-shopping"></i></a>
 
     
           

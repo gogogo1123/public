@@ -378,7 +378,7 @@ body {
    
     
         <div class="profile">
-             <input type="text" value="${sessionScope.member_id }">
+           
             <c:if test="${sessionScope.member_id != null }">
 <a href="<%=request.getContextPath()%>/product/write.do" style="margin-left: 200px;margin-top: 150px;"><button type="button" class="btn btn-sm bg-dark text-white">상품등록</button></a>
              </c:if>

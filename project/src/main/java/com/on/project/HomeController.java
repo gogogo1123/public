@@ -50,4 +50,9 @@ public class HomeController {
 	public String order() {
 		return "cart/cart_order";
 	}
+	
+	@RequestMapping("page")
+	public String page() {
+		return "page/NewFile";
+	}
 }
