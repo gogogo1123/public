@@ -361,7 +361,7 @@ body {
 <div style="width: 1600px;height: 400px;display: flex;margin-left: 400px;">
 
     <SPAN style="margin-top: 50px;text-align: center;font-size: 24px;font-family: 'Nanum Gothic', sans-serif;">브랜드별</SPAN>
-   
+  
     
     <div class="card" style="width: 300px;height:300px;margin-top: 150px;background-color:white;">
        <a class="nav-link" href="<%=request.getContextPath()%>/product/list.do?brand=rolex">

@@ -378,7 +378,7 @@ body {
    
     
         <div class="profile">
-           
+           <P> 보고 계신 페이지 상업용이 아닌 공부용으로 제작되었습니다 .. </P>
             <c:if test="${sessionScope.member_id != null }">
 <a href="<%=request.getContextPath()%>/product/write.do" style="margin-left: 200px;margin-top: 150px;"><button type="button" class="btn btn-sm bg-dark text-white">상품등록</button></a>
              </c:if>
