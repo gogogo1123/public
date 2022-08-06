@@ -33,12 +33,21 @@ public class MemberController {
 	@RequestMapping("loginprocess.do")
 	public String loginprocess(MemberVo vo,HttpSession session) {
 		
+		
+		
 		String name = memberService.loginprocess(vo); // MemberVo 클래스에 login 페이지에서 넘어온값을 집어넣음 ㅎ.
 		
 		if(name != null) { // 쿼리가 정상적으로 실행되면 이름을 받아와서 실행
+			
+			
+			
+			
 			session.setAttribute("member_id", vo.getMember_id()); //세션값을 아이디를 저장
+			System.out.println("vo==" +vo.getMember_id());
 			session.setAttribute("name", name); // 세션값을 이름값을 저장
+			
 		
+			
 		}else if(name ==null){ // name ==null 이면 데이터베이스가 실행되자않음
 			return "member/login"; // 로그인페이지로 다시이동 해줌
 		}

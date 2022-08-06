@@ -25,7 +25,7 @@ insert into producttable(product_name,product_amount,product_price,filename,prod
 	
 	<update id="update">
 	
-	update producttable set product_name=#{product_name},product_amount=#{product_amount},product_price=#{product_price},filename=#{filename},product_brand=#{product_brand}
+	update producttable set product_name=#{product_name},product_amount=#{product_amount},product_price=#{product_price},filename=#{filename},product_brand=#{product_brand} where product_code=#{product_code}
 	
 	</update>
 	

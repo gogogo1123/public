@@ -100,8 +100,8 @@ return;
                             </ol>
                         </nav>	
                         <div class="product_name">${vo.product_name}</div>
-                   
-                        <div> <span class="product_price">${vo.product_price}</span> <strike class="product_discount"> </strike>  </div>
+                  
+                        <div> <span class="product_price">  <fmt:formatNumber value="${vo.product_price}" pattern="#,###" />&nbsp;원</span> <strike class="product_discount"> </strike>  </div>
                         <div>  </div>
                         <hr class="singleline">
                         <div> <span class="product_info">재고수량 : ${vo.product_amount}&nbsp;개<span><br> <span class="product_info">제품보증기간 : 구입후 1년이내<span><br>

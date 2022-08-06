@@ -6,6 +6,7 @@ import java.util.List;
 
 import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -72,7 +73,10 @@ public class ProductController {
 	
 	
 	@RequestMapping("list.do")
-	public ModelAndView list(ModelAndView mav,Criteria cri) throws Exception {
+	public ModelAndView list(ModelAndView mav,Criteria cri,HttpSession session) throws Exception {
+		
+		
+	 
 		
 		System.out.println("keyword =" + cri.getKeyword());
 		

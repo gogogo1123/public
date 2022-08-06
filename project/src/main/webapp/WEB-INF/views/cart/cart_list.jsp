@@ -53,11 +53,11 @@ $(function(){
      <div class="container-fluid">
      <header>
     <div class="d-flex justify-content-center align-items-center pb-3">
-        <div class="px-sm-5 px-2 active">SHOPPING CART
+        <div class="px-sm-5 px-2 active">장바구니
             <span class="fas fa-check"></span>
         </div>
-        <div class="px-sm-5 px-2">CHECKOUT</div>
-        <div class="px-sm-5 px-2">FINISH</div>
+        <div class="px-sm-5 px-2">결제페이지</div>
+        <div class="px-sm-5 px-2">결제완료</div>
     </div>
     <div class="progress">
         <div class="progress-bar bg-success" role="progressbar" aria-valuenow="25" aria-valuemin="0"
@@ -97,11 +97,12 @@ $(function(){
                                      </div>
                                      <div class="cart_item_price cart_info_col">
                                          <div class="cart_item_title">Price</div>
-                                         <div class="cart_item_text">${row.product_price}</div>
+                                         <div class="cart_item_text"><fmt:formatNumber value="${row.product_price}" pattern="#,###" />&nbsp;원</div>
                                      </div>
                                      <div class="cart_item_total cart_info_col">
                                          <div class="cart_item_title">Total</div>
-                                         <div class="cart_item_text">${row.money}</div>
+                                         <div class="cart_item_text"><fmt:formatNumber value="${row.money}" pattern="#,###" />&nbsp;원</div>
+                                           
                                      </div>
                                       <div class="cart_item_total cart_info_col">
                                          <div class="cart_item_title">삭제</div>
@@ -118,11 +119,11 @@ $(function(){
                                 </c:forEach>
                      </div>
     </form>        
-                    
+                  
                      <div class="order_total">
                          <div class="order_total_content text-md-right" style="float: right;">
                              <div class="order_total_title">총 금액:</div>
-                             <div class="order_total_amount">${map.sumMoney}&nbsp;원</div>
+                             <div class="order_total_amount"><fmt:formatNumber value="${map.sumMoney}" pattern="#,###" />&nbsp;원</div>
                          </div>
                      </div>
                      <div class="cart_buttons"> 

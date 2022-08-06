@@ -185,10 +185,10 @@
                     
                     <div class="d-flex flex-column px-3">
                         <b class="h5">총 결제 금액</b>
-                      
+                     
                     </div>
                     <div class="ml-auto">
-                        <b class="h5">${map.sumMoney}</b>
+                        <b class="h5"> <fmt:formatNumber value="${map.sumMoney}" pattern="#,###" />&nbsp;원</b>
                     </div>
                 </div>
               
@@ -197,7 +197,7 @@
                     <div class="display-5">Total</div>
                     <div class="ml-auto d-flex">
                         <div class="text-primary text-uppercase px-3">금액</div>
-                        <div class="font-weight-bold">${map.sumMoney}</div>
+                        <div class="font-weight-bold"> <fmt:formatNumber value="${map.sumMoney}" pattern="#,###" />&nbsp;원</div>
                     </div>
                 </div>
             </div>
@@ -239,9 +239,9 @@
                     </table>
                 </div>
                 <div class="border-top py-2 d-flex align-items-center ml-2 font-weight-bold">
-                    <div>Total</div>
+                 
                     <div class="ml-auto text-primary">총 결제 금액</div>
-                    <div class="px-2">${map.sumMoney}</div>
+                    <div class="px-2"><fmt:formatNumber value="${map.sumMoney}" pattern="#,###" />&nbsp;원</div>
                 </div>
             </div>
             
