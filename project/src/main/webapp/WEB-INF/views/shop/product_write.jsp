@@ -54,7 +54,7 @@ function check(){
 	}
 	
 	
-	frm.action = "/project/product/insert.do";
+	frm.action = "<%=request.getContextPath()%>/product/insert.do";
 	frm.enctype="multipart/form-data"; //파일보낼때 꼭 써줘야함 업로드할때!! 안그러면 안넘어가니 주의 !!
 	frm.method="post";
 	frm.submit();
