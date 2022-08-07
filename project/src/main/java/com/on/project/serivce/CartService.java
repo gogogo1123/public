@@ -14,16 +14,15 @@ import com.on.project.vo.TotalVo;
 @Service
 public class CartService {
 
-	
 	private CartDao cartDao;
-	
+
 	@Autowired
 	public CartService(CartDao cartDao) {
 		this.cartDao = cartDao;
 	}
 
 	public void insert(CartVo vo) {
-       cartDao.insert(vo);		
+		cartDao.insert(vo);
 	}
 
 	public List<TotalVo> list(String userid) {
@@ -35,18 +34,15 @@ public class CartService {
 	}
 
 	public void delete(int cart_id) {
-        cartDao.delete(cart_id);		
+		cartDao.delete(cart_id);
 	}
 
 	public void deleteAll(String userid) {
-        cartDao.deleteAll(userid);		
+		cartDao.deleteAll(userid);
 	}
 
 	public void update(CartVo vo) {
 		cartDao.update(vo);
 	}
-	
-	
 
-	
 }

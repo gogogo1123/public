@@ -10,23 +10,17 @@ import com.on.project.vo.OrderVo;
 @Repository
 public class OrderDao {
 
-	
-	
 	public SqlSession sqlSession;
-	
+
 	public static final String MAPPER = "order";
-	
+
 	@Autowired
 	public OrderDao(SqlSession sqlSession) {
-		this.sqlSession= sqlSession;
+		this.sqlSession = sqlSession;
 	}
 
 	public void update(OrderVo vo) {
-           sqlSession.insert(MAPPER+".insert",vo);		
+		sqlSession.insert(MAPPER + ".insert", vo);
 	}
-	
-	
 
-	
-	
 }

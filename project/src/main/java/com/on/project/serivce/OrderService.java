@@ -11,18 +11,15 @@ import com.on.project.vo.OrderVo;
 @Service
 public class OrderService {
 
-	
 	private OrderDao orderDao;
-	
+
 	@Autowired
 	public OrderService(OrderDao orderDao) {
 		this.orderDao = orderDao;
 	}
 
 	public void update(OrderVo vo) {
-	   orderDao.update(vo);
+		orderDao.update(vo);
 	}
-	
 
-	
 }
