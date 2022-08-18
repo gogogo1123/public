@@ -21,5 +21,10 @@ select member_name from membertable where member_id=#{member_id} and member_pw =
 </select>
 	
 	
+<select id="check" resultType="int" parameterType="String">
+
+select count(*) from membertable where member_id=#{member_id}
+
+</select>	
 	
 </mapper>

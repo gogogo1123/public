@@ -25,4 +25,22 @@
 	</select>
 	
 	
+	<delete id="delete">
+	
+	delete from carttable where cart_id=#{cart_id}
+	
+	</delete>
+	
+	<delete id="deleteAll">
+	
+	delete from carttable where member_id=#{userid}
+	
+	</delete>
+	
+	<update id="update">
+	
+	update carttable set amount = #{amount} where cart_id=#{cart_id}
+	
+	</update>
+	
 </mapper>
